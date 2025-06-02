@@ -6,6 +6,7 @@ import os
 import gspread
 
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 def main():
     credentials = os.getenv('GDOC_CREDENTIALS')
@@ -16,7 +17,7 @@ def main():
 
     gc = gspread.service_account_from_dict(service_acct)
 
-    today = datetime.today()
+    today = datetime.now(ZoneInfo('America/New_York'))
 
     sh = gc.open('published crosswords')
     puzzles = sh.worksheet('all').get_all_records()
@@ -28,7 +29,7 @@ def main():
         r['category'] = 'puzzle'
 
  
-    puzzles = [r for r in puzzles if datetime.fromisoformat(r['date']) <= today]
+    puzzles = [r for r in puzzles if datetime.fromisoformat(r['date']).replace(tzinfo=ZoneInfo('America/New_York')) <= today]
 
     misc = sh.worksheet('misc').get_all_records()
 
@@ -36,9 +37,10 @@ def main():
         r['date'] = datetime.strptime(r['publish date'], '%m/%d/%Y').date().isoformat()
         r['category'] = 'misc'
 
-    misc = [r for r in misc if datetime.fromisoformat(r['date']) <= today]
+    misc = [r for r in misc if datetime.fromisoformat(r['date']).replace(tzinfo=ZoneInfo('America/New_York')) <= today]
 
     data = puzzles + misc
+    data.sort(key=lambda e: e['date'], reverse=True)
 
     with open('data.json', 'w') as f:
         json.dump(data, f, indent=4)
