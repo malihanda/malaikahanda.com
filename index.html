@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
-    <link rel="stylesheet" href="calendar-styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
     <div id="filter-controls-area"></div>
@@ -13,9 +13,9 @@
     <div id="details-panel" class="details-panel"></div>
     <script type="module">
 
-        import { DetailsPanel } from './details-panel.js';
-        import { CalendarChart } from './chart.js';
-        import { FilterSystem, populateFilterControls } from './filter-system.js';
+        import { DetailsPanel } from './js/details-panel.js';
+        import { CalendarChart } from './js/chart.js';
+        import { FilterSystem, populateFilterControls } from './js/filter-system.js';
 
         const colorConditions = [
             {
@@ -66,7 +66,7 @@
         });
         
         // Load and render initial data
-        await chart.loadData('data.json');
+        await chart.loadData('/data.json');
         chart.render();
 
         const filterConfig = [
