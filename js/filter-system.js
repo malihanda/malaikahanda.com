@@ -199,6 +199,8 @@ function populateFilterControls(containerElementId, filterSystem) {
     clearAllLink.addEventListener("click", (e) => {
         e.preventDefault();
         filterSystem.clearAllFilters();
+        const categoryClearLinks = document.querySelectorAll('.category-clear-link');
+        categoryClearLinks.forEach((cl) => cl.style.display = "none");
         const allCheckboxes = filterWrapper.querySelectorAll(
             'input[type="checkbox"]'
         );
@@ -419,7 +421,7 @@ function createCheckboxOption(
         (f) => f.categoryId === categoryConfig.id && f.value === value
     );
     checkbox.className = "filter-checkbox";
-    
+
     // Add custom checkbox styles to ensure cross-browser compatibility
     const style = document.createElement('style');
     if (!document.querySelector('#filter-checkbox-styles')) {
@@ -546,9 +548,8 @@ function updateDropdownButtonText(button, categoryConfig, filterSystem) {
         if (hasAnyFilter) {
             button.textContent = `Showing any ${singularLabel}`;
         } else {
-            button.textContent = `Showing ${activeCategoryFilters.length} ${
-                activeCategoryFilters.length === 1 ? singularLabel : pluralLabel
-            }`;
+            button.textContent = `Showing ${activeCategoryFilters.length} ${activeCategoryFilters.length === 1 ? singularLabel : pluralLabel
+                }`;
         }
     }
 }
