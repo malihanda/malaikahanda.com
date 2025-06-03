@@ -1,15 +1,8 @@
-/**
- * filter-system.js
- * Manages the new filter system logic and UI generation.
- */
+// Manages the filter system logic and UI generation
 
 const ANY_FILTER_VALUE = "__ANY__";
 
 class FilterSystem {
-    /**
-     * @param {Array<Object>} allRecordsData - The complete dataset of records.
-     * @param {Array<{id: string, label: string, includeAny?: boolean}>} filterConfig - Configuration for filters.
-     */
     constructor(allRecordsData, filterConfig) {
         this.allRecordsData = allRecordsData;
         this.filterConfig = filterConfig;
@@ -176,11 +169,7 @@ class FilterSystem {
     }
 }
 
-/**
- * Populates the filter UI controls.
- * @param {HTMLElement} containerElement - The DOM element to append the filter UI to.
- * @param {FilterSystem} filterSystem - The initialized FilterSystem instance.
- */
+// Populates the filter UI controls in the given container element
 function populateFilterControls(containerElementId, filterSystem) {
     const containerElement = document.getElementById(containerElementId);
     containerElement.innerHTML = ""; // Clear previous controls
@@ -268,13 +257,7 @@ function populateFilterControls(containerElementId, filterSystem) {
     updateFilterOptionCounts(filterSystem, filterWrapper);
 }
 
-/**
- * Creates a single filter dropdown.
- * @param {{id: string, label: string, includeAny?: boolean}} categoryConfig - Config for the category.
- * @param {FilterSystem} filterSystem - The FilterSystem instance.
- * @param {HTMLElement} filterWrapper - The top-level wrapper for all filters (used to find elements).
- * @returns {HTMLElement} The created filter column element.
- */
+// Creates a single filter dropdown with header, clear link, and options
 function createFilterDropdown(categoryConfig, filterSystem, filterWrapper) {
     const column = document.createElement("div");
     column.className = "filter-column"; // Assumes CSS
@@ -390,15 +373,7 @@ function createFilterDropdown(categoryConfig, filterSystem, filterWrapper) {
     return column;
 }
 
-/**
- * Helper to create a checkbox option for a dropdown.
- * @param {*} value - The value for this checkbox.
- * @param {string} labelText - The display text for the label.
- * @param {object} categoryConfig - The configuration object for the category.
- * @param {FilterSystem} filterSystem - The FilterSystem instance.
- * @param {HTMLButtonElement} dropdownButton - The button for this dropdown (to update its text).
- * @param {HTMLElement} dropdownContentElement - The content element of this dropdown (to find sibling checkboxes).
- */
+// Creates a checkbox option for a dropdown with proper event handling
 function createCheckboxOption(
     value,
     labelText,
@@ -528,9 +503,7 @@ function createCheckboxOption(
     return optionDiv;
 }
 
-/**
- * Updates the text of a dropdown button based on active filters for its category.
- */
+// Updates the text of a dropdown button based on active filters for its category
 function updateDropdownButtonText(button, categoryConfig, filterSystem) {
     const activeCategoryFilters = filterSystem.activeFilters.filter(
         (f) => f.categoryId === categoryConfig.id
@@ -554,11 +527,7 @@ function updateDropdownButtonText(button, categoryConfig, filterSystem) {
     }
 }
 
-/**
- * Updates the count display on all filter option labels.
- * @param {FilterSystem} filterSystem
- * @param {HTMLElement} filterWrapperElement - The top-level element containing all filter controls.
- */
+// Updates the count display on all filter option labels
 function updateFilterOptionCounts(filterSystem, filterWrapperElement) {
     const allCounts = filterSystem.getFilterCounts();
 
