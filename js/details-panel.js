@@ -84,7 +84,15 @@ export class DetailsPanel {
         ) {
             const panelHeight =
                 this.panelElement.getBoundingClientRect().height;
-            this.chartContainer.style.paddingBottom = `${panelHeight}px`;
+            let footerHeight = 0;
+            const footerElement = document.getElementById("footer");
+            if (footerElement) {
+                footerHeight = footerElement.getBoundingClientRect().height;
+            }
+            // Padding needed is the panel height minus the part of it that covers the footer.
+            // Ensure padding is not negative.
+            const paddingValue = Math.max(0, panelHeight - footerHeight);
+            this.chartContainer.style.paddingBottom = `${paddingValue}px`;
         } else {
             this.chartContainer.style.paddingBottom = "0px"; // Explicitly set to 0px
         }
