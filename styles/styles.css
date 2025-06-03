@@ -11,7 +11,37 @@
 body {
     font-family: monospace;
     background: #b3b3b3;
+    color: var(--near-black);
     padding: 20px;
+}
+
+#bio {
+    max-width: 1022px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+#bio a,
+#bio a:visited,
+#footer a,
+#footer a:visited {
+    color: var(--color-3);
+}
+
+#bio a:hover,
+#footer a:hover {
+    color: var(--color-4);
+}
+
+#intro {
+}
+
+section#bio {
+    padding-bottom: 40px;
+}
+
+section#footer {
+    height: 20px;
 }
 
 #chart-container {
@@ -410,12 +440,8 @@ h2 {
     text-decoration: underline;
 }
 
-/* Ensure .filter-controls takes full width of its parent (.filter-wrapper) */
-/* If .filter-controls is already defined, verify its width property. */
-/* It might look something like this, or be adjusted based on existing rules: */
 .filter-controls {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     margin-bottom: 20px; /* Or keep existing margin */

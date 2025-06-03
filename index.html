@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar</title>
+    <title>malaika handa</title>
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
-    <div id="filter-controls-area"></div>
-    <div id="chart-container"></div>
-    <div id="tooltip" class="tooltip"></div>
-    <div id="details-panel" class="details-panel"></div>
+    <section id="bio">
+        <p><span id="intro">My name is Malaika Handa and I've made <span id="crossword-count">lots of</span> crossword puzzles.</span> You'll find me in <a href="https://www.vulture.com/2022/01/introducing-the-vulture-10x10-daily-crossword-puzzle.html" target="_blank">Vulture magazine</a> several days a week, and writing for <a href="https://rexwordpuzzle.blogspot.com/p/frequently-asked-questions-i-get-lots.html" target="_blank">rexwordpuzzle</a> about once a month. I'm also sporadically published in other outlets (see below); if you'd like to get an email when that happens, <a href="https://groups.google.com/g/girlbosswords" target="_blank">sign up here</a>. In the past, I ran <a href="https://www.7xwords.com/" target="_blank">the 7xwords project</a> and blogged for <a href="https://crosswordfiend.com/" target="_blank">Diary of a Crossword Fiend</a>.</p>
+        <p>When I'm not crossword-ing, I write code, play volleyball, teach high schoolers computer science, drink cocktails, and <a href="https://tinyurl.com/malaikas-romance-recs" target="_blank">read romance novels</a>. Find me on <a href="https://x.com/malisolves" target="_blank">Twitter</a>, <a href="https://bsky.app/profile/malaika-h.bsky.social" target="_blank">bluesky</a> or <a href="https://www.instagram.com/malihanda/" target="_blank">Instagram</a>. Or, email works too: handa malaika at gmail dot com.</p>
+    </section>
+    <section id="calendar-chart">
+        <div id="filter-controls-area"></div>
+        <div id="chart-container"></div>
+        <div id="tooltip" class="tooltip"></div>
+        <div id="details-panel" class="details-panel"></div>
+    </section>
+    <section id="footer">
+        <p>This website was built by <a href="https://parkerhiggins.net" target="_blank">Parker</a>.</p>
+    </section>
     <script type="module">
 
         import { DetailsPanel } from './js/details-panel.js';
@@ -68,6 +77,8 @@
         // Load and render initial data
         await chart.loadData('/data.json');
         chart.render();
+
+        document.querySelector('#crossword-count').innerHTML = chartData.records.filter((r) => r.category === "puzzle").length
 
         const filterConfig = [
             {'id': 'publication', 'label': 'Publication'},
