@@ -40,6 +40,8 @@ export class DetailsPanel {
         this.contentElement.className = "details-panel-content";
         this.panelElement.appendChild(this.contentElement);
 
+        this.chartContainer = document.getElementById("chart-container");
+
         // Bind methods to ensure 'this' context is correct when used as event handlers
         this._handleUrlHash = this._handleUrlHash.bind(this);
         this._handleOutsideClick = this._handleOutsideClick.bind(this);
@@ -73,22 +75,29 @@ export class DetailsPanel {
         this._handleUrlHash();
     }
 
+    _updateChartPadding() {
+        if (!this.chartContainer || !this.panelElement) return;
+
+        if (
+            this.panelElement.classList.contains("visible") &&
+            this.panelElement.classList.contains("narrow")
+        ) {
+            const panelHeight =
+                this.panelElement.getBoundingClientRect().height;
+            this.chartContainer.style.paddingBottom = `${panelHeight}px`;
+        } else {
+            this.chartContainer.style.paddingBottom = "0px"; // Explicitly set to 0px
+        }
+    }
+
     makeNarrowIfNecessary() {
-        if (!this.panelElement) return;
-        const chartContainer = document.getElementById("chart-container");
-        if (!chartContainer) return;
+        if (!this.panelElement || !this.chartContainer) return;
         const chartContainerRightBound =
-            chartContainer.getBoundingClientRect().right;
+            this.chartContainer.getBoundingClientRect().right;
         const shouldBeNarrow =
             chartContainerRightBound > window.innerWidth - 300;
         this.panelElement.classList.toggle("narrow", shouldBeNarrow);
-        if (shouldBeNarrow && this.panelElement.classList.contains("visible")) {
-            const panelHeight =
-                this.panelElement.getBoundingClientRect().height;
-            chartContainer.style.paddingBottom = `${panelHeight}px`;
-        } else {
-            chartContainer.style.paddingBottom = "0";
-        }
+        this._updateChartPadding();
     }
 
     showDetails(date, records) {
@@ -168,23 +177,14 @@ export class DetailsPanel {
         } else {
             this.contentElement.innerHTML = "<p>No content on this date.</p>";
         }
-        this.makeNarrowIfNecessary();
         this.panelElement.classList.add("visible");
-
-        // Only set padding if panel is visible and narrow
-        const chartContainer = document.getElementById("chart-container");
-        if (this.panelElement.classList.contains("narrow")) {
-            const panelHeight =
-                this.panelElement.getBoundingClientRect().height;
-            chartContainer.style.paddingBottom = `${panelHeight}px`;
-        } else {
-            chartContainer.style.paddingBottom = "0";
-        }
+        this.makeNarrowIfNecessary();
     }
 
     hideDetails() {
         if (!this.panelElement) return;
         this.panelElement.classList.remove("visible");
+        this._updateChartPadding();
         if (window.location.hash) {
             window.history.pushState(null, "", window.location.pathname);
         }
