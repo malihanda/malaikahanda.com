@@ -167,411 +167,424 @@ class FilterSystem {
 
         return allCategoryCounts;
     }
-}
 
-// Populates the filter UI controls in the given container element
-function populateFilterControls(containerElementId, filterSystem) {
-    const containerElement = document.getElementById(containerElementId);
-    containerElement.innerHTML = ""; // Clear previous controls
-
-    const filterWrapper = document.createElement("div");
-    filterWrapper.className = "filter-wrapper"; // Assumes CSS for .filter-wrapper exists
-
-    // --- Clear All Filters Link ---
-    const clearAllContainer = document.createElement("div");
-    clearAllContainer.className = "clear-all-container";
-    const clearAllLink = document.createElement("a");
-    clearAllLink.className = "clear-all-link";
-    clearAllLink.href = "#";
-    clearAllLink.textContent = "Clear all filters";
-    clearAllLink.style.textDecoration = "underline";
-    clearAllLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        filterSystem.clearAllFilters();
-        const categoryClearLinks = document.querySelectorAll('.category-clear-link');
-        categoryClearLinks.forEach((cl) => cl.style.display = "none");
-        const allCheckboxes = filterWrapper.querySelectorAll(
-            'input[type="checkbox"]'
-        );
-        allCheckboxes.forEach((cb) => (cb.checked = false));
-        filterSystem.filterConfig.forEach((catConfig) => {
-            const button = filterWrapper.querySelector(
-                `#dropdown-button-${catConfig.id}`
+    // Populates the filter UI controls in the given container element
+    populateFilterControls(containerElementId) {
+        const containerElement = document.getElementById(containerElementId);
+        if (!containerElement) {
+            console.error(
+                `FilterSystem: Element with ID '${containerElementId}' not found.`
             );
-            if (button) {
-                updateDropdownButtonText(button, catConfig, filterSystem);
-            }
-        });
-        filterSystem.applyFilters(); // Apply filters first
-        updateFilterOptionCounts(filterSystem, filterWrapper); // Then update counts for all
-    });
-    clearAllContainer.appendChild(clearAllLink);
+            return;
+        }
+        containerElement.innerHTML = ""; // Clear previous controls
 
-    // --- Filter Dropdowns ---
-    const filterControls = document.createElement("div");
-    filterControls.className = "filter-controls"; // Assumes CSS for .filter-controls exists
+        const filterWrapper = document.createElement("div");
+        filterWrapper.className = "filter-wrapper"; // Assumes CSS for .filter-wrapper exists
 
-    filterSystem.filterConfig.forEach((categoryConfig) => {
-        const filterColumn = createFilterDropdown(
-            categoryConfig,
-            filterSystem,
-            filterWrapper
-        );
-        filterControls.appendChild(filterColumn);
-    });
-
-    filterControls.appendChild(clearAllContainer);
-
-    filterWrapper.appendChild(filterControls);
-    containerElement.appendChild(filterWrapper);
-
-    // --- Document Click Listener for Closing Dropdowns (reusing previous robust logic) ---
-    if (populateFilterControls.clickOutsideListener) {
-        document.removeEventListener(
-            "click",
-            populateFilterControls.clickOutsideListener
-        );
-    }
-    populateFilterControls.clickOutsideListener = (event) => {
-        const openDropdownContents = filterWrapper.querySelectorAll(
-            ".dropdown-content.show"
-        );
-        openDropdownContents.forEach((dropdownContent) => {
-            const dropdownContainer = dropdownContent.closest(
-                ".dropdown-container"
+        // --- Clear All Filters Link ---
+        const clearAllContainer = document.createElement("div");
+        clearAllContainer.className = "clear-all-container";
+        const clearAllLink = document.createElement("a");
+        clearAllLink.className = "clear-all-link";
+        clearAllLink.href = "#";
+        clearAllLink.textContent = "Clear all filters";
+        clearAllLink.style.textDecoration = "underline";
+        clearAllLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            this.clearAllFilters();
+            const categoryClearLinks = document.querySelectorAll(
+                ".category-clear-link"
             );
-            if (
-                dropdownContainer &&
-                !dropdownContainer.contains(event.target)
-            ) {
-                dropdownContent.classList.remove("show");
-            }
-        });
-    };
-    document.addEventListener(
-        "click",
-        populateFilterControls.clickOutsideListener
-    );
-
-    // Initial count update after all controls are populated
-    updateFilterOptionCounts(filterSystem, filterWrapper);
-}
-
-// Creates a single filter dropdown with header, clear link, and options
-function createFilterDropdown(categoryConfig, filterSystem, filterWrapper) {
-    const column = document.createElement("div");
-    column.className = "filter-column"; // Assumes CSS
-
-    // Create header container to hold both heading and clear link
-    const headerContainer = document.createElement("div");
-    headerContainer.className = "filter-header";
-    headerContainer.style.display = "flex";
-    headerContainer.style.alignItems = "center";
-    headerContainer.style.gap = "8px";
-
-    const heading = document.createElement("h2");
-    heading.textContent = categoryConfig.label;
-    headerContainer.appendChild(heading);
-
-    // Add clear link
-    const clearLink = document.createElement("a");
-    clearLink.className = "category-clear-link";
-    clearLink.href = "#";
-    clearLink.textContent = "(clear filters)";
-    clearLink.style.fontSize = "12px";
-    clearLink.style.color = "var(--near-black)";
-    clearLink.style.textDecoration = "underline";
-    clearLink.style.display = "none"; // Initially hidden
-
-    clearLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        // Remove all filters for this category
-        filterSystem.activeFilters = filterSystem.activeFilters.filter(
-            f => f.categoryId !== categoryConfig.id
-        );
-        // Uncheck all checkboxes in this dropdown
-        const checkboxes = dropdownContent.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(cb => cb.checked = false);
-        // Update UI
-        filterSystem.applyFilters();
-        updateDropdownButtonText(dropdownButton, categoryConfig, filterSystem);
-        updateFilterOptionCounts(filterSystem, filterWrapper);
-        clearLink.style.display = "none";
-    });
-
-    headerContainer.appendChild(clearLink);
-    column.appendChild(headerContainer);
-
-    const dropdownContainer = document.createElement("div");
-    dropdownContainer.className = "dropdown-container";
-
-    const dropdownButton = document.createElement("button");
-    dropdownButton.className = "dropdown-button";
-    dropdownButton.id = `dropdown-button-${categoryConfig.id}`; // For updating text
-    updateDropdownButtonText(dropdownButton, categoryConfig, filterSystem); // Initial text
-
-    // Update clear link visibility based on active filters
-    const updateClearLinkVisibility = () => {
-        const hasActiveFilters = filterSystem.activeFilters.some(
-            f => f.categoryId === categoryConfig.id
-        );
-        clearLink.style.display = hasActiveFilters ? "block" : "none";
-    };
-    updateClearLinkVisibility(); // Initial state
-
-    dropdownButton.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const currentDropdownContent =
-            dropdownContainer.querySelector(".dropdown-content");
-        filterWrapper
-            .querySelectorAll(".dropdown-content.show")
-            .forEach((otherContent) => {
-                if (otherContent !== currentDropdownContent) {
-                    otherContent.classList.remove("show");
+            categoryClearLinks.forEach((cl) => (cl.style.display = "none"));
+            const allCheckboxes = filterWrapper.querySelectorAll(
+                'input[type="checkbox"]'
+            );
+            allCheckboxes.forEach((cb) => (cb.checked = false));
+            this.filterConfig.forEach((catConfig) => {
+                const button = filterWrapper.querySelector(
+                    `#dropdown-button-${catConfig.id}`
+                );
+                if (button) {
+                    this._updateDropdownButtonText(button, catConfig);
                 }
             });
-        if (currentDropdownContent) {
-            currentDropdownContent.classList.toggle("show");
+            this.applyFilters(); // Apply filters first
+            this._updateFilterOptionCounts(filterWrapper); // Then update counts for all
+        });
+        clearAllContainer.appendChild(clearAllLink);
+
+        // --- Filter Dropdowns ---
+        const filterControls = document.createElement("div");
+        filterControls.className = "filter-controls"; // Assumes CSS for .filter-controls exists
+
+        this.filterConfig.forEach((categoryConfig) => {
+            const filterColumn = this._createFilterDropdown(
+                categoryConfig,
+                filterWrapper
+            );
+            filterControls.appendChild(filterColumn);
+        });
+
+        filterControls.appendChild(clearAllContainer);
+
+        filterWrapper.appendChild(filterControls);
+        containerElement.appendChild(filterWrapper);
+
+        // --- Document Click Listener for Closing Dropdowns (reusing previous robust logic) ---
+        if (FilterSystem.clickOutsideListener) {
+            document.removeEventListener(
+                "click",
+                FilterSystem.clickOutsideListener
+            );
         }
-    });
-    dropdownContainer.appendChild(dropdownButton);
-
-    const dropdownContent = document.createElement("div");
-    dropdownContent.className = "dropdown-content";
-
-    // "Any" option
-    if (categoryConfig.includeAny) {
-        const anyOptionDiv = createCheckboxOption(
-            ANY_FILTER_VALUE,
-            `Any ${categoryConfig.label.toLowerCase()}`,
-            categoryConfig,
-            filterSystem,
-            dropdownButton,
-            dropdownContent,
-            updateClearLinkVisibility // Pass the update function
-        );
-        dropdownContent.appendChild(anyOptionDiv);
-    }
-
-    // Unique value options
-    const values = filterSystem.uniqueFilterValues[categoryConfig.id];
-    values.forEach((value) => {
-        const optionDiv = createCheckboxOption(
-            value,
-            String(value), // Label for the option
-            categoryConfig,
-            filterSystem,
-            dropdownButton,
-            dropdownContent,
-            updateClearLinkVisibility // Pass the update function
-        );
-        dropdownContent.appendChild(optionDiv);
-    });
-
-    dropdownContainer.appendChild(dropdownContent);
-    column.appendChild(dropdownContainer);
-    return column;
-}
-
-// Creates a checkbox option for a dropdown with proper event handling
-function createCheckboxOption(
-    value,
-    labelText,
-    categoryConfig,
-    filterSystem,
-    dropdownButton,
-    dropdownContentElement,
-    updateClearLinkVisibility
-) {
-    const optionDiv = document.createElement("div");
-    optionDiv.className = "dropdown-option";
-
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.value = value;
-    checkbox.id = `filter-${categoryConfig.id}-${String(value)
-        .replace(/\s+/g, "-")
-        .replace(/[^a-zA-Z0-9-]/g, "")}`;
-    checkbox.checked = filterSystem.activeFilters.some(
-        (f) => f.categoryId === categoryConfig.id && f.value === value
-    );
-    checkbox.className = "filter-checkbox";
-
-    // Add custom checkbox styles to ensure cross-browser compatibility
-    const style = document.createElement('style');
-    if (!document.querySelector('#filter-checkbox-styles')) {
-        style.id = 'filter-checkbox-styles';
-        style.textContent = `
-            .filter-checkbox {
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                width: 16px;
-                height: 16px;
-                border: 2px solid #ccc;
-                border-radius: 3px;
-                outline: none;
-                cursor: pointer;
-                position: relative;
-                background: white;
-            }
-            .filter-checkbox:checked {
-                background-color: var(--color-4);
-                border-color: var(--color-4);
-            }
-            .filter-checkbox:checked::after {
-                content: '';
-                position: absolute;
-                left: 3px;
-                top: 0px;
-                width: 4px;
-                height: 8px;
-                border: solid white;
-                border-width: 0 2px 2px 0;
-                transform: rotate(45deg);
-            }
-        `;
-        document.head.appendChild(style);
-    }
-
-    // Store the original label text without count for reconstruction
-    checkbox.dataset.originalLabelText = labelText;
-
-    const label = document.createElement("label");
-    label.htmlFor = checkbox.id;
-    // Initial label text set here (will be updated with counts by updateFilterOptionCounts)
-    label.textContent = labelText;
-
-    // Create a function to handle the checkbox change logic
-    const handleCheckboxChange = () => {
-        const categoryId = categoryConfig.id;
-        const isThisAnyCheckbox = value === ANY_FILTER_VALUE;
-
-        if (checkbox.checked) {
-            if (isThisAnyCheckbox) {
-                dropdownContentElement
-                    .querySelectorAll('input[type="checkbox"]')
-                    .forEach((cb) => {
-                        if (cb !== checkbox) {
-                            cb.checked = false;
-                        }
-                    });
-                filterSystem.activeFilters = filterSystem.activeFilters.filter(
-                    (f) => f.categoryId !== categoryId
+        FilterSystem.clickOutsideListener = (event) => {
+            const openDropdownContents = filterWrapper.querySelectorAll(
+                ".dropdown-content.show"
+            );
+            openDropdownContents.forEach((dropdownContent) => {
+                const dropdownContainer = dropdownContent.closest(
+                    ".dropdown-container"
                 );
-                filterSystem.addFilter(categoryId, ANY_FILTER_VALUE);
-            } else {
-                if (categoryConfig.includeAny) {
-                    const anyCheckbox = dropdownContentElement.querySelector(
-                        `input[type="checkbox"][value="${ANY_FILTER_VALUE}"]`
-                    );
-                    if (anyCheckbox && anyCheckbox.checked) {
-                        anyCheckbox.checked = false;
-                        filterSystem.removeFilter(categoryId, ANY_FILTER_VALUE);
-                    }
+                if (
+                    dropdownContainer &&
+                    !dropdownContainer.contains(event.target)
+                ) {
+                    dropdownContent.classList.remove("show");
                 }
-                filterSystem.addFilter(categoryId, value);
-            }
-        } else {
-            filterSystem.removeFilter(categoryId, value);
-        }
+            });
+        };
+        document.addEventListener("click", FilterSystem.clickOutsideListener);
 
-        filterSystem.applyFilters(); // Apply filters to the calendar/DOM
-        updateDropdownButtonText(dropdownButton, categoryConfig, filterSystem); // Update the main button text
-        // Update counts for all categories. Pass the main filterWrapper.
-        updateFilterOptionCounts(
-            filterSystem,
-            dropdownContentElement.closest(".filter-wrapper")
-        );
-        updateClearLinkVisibility(); // Update clear link visibility
-    };
-
-    // Add click handler to the entire div
-    optionDiv.addEventListener("click", (e) => {
-        // Don't handle clicks on the checkbox or label - let their native events handle it
-        if (e.target !== checkbox && e.target !== label) {
-            checkbox.checked = !checkbox.checked;
-            handleCheckboxChange();
-        }
-    });
-
-    // Handle the checkbox change event
-    checkbox.addEventListener("change", handleCheckboxChange);
-
-    optionDiv.appendChild(checkbox);
-    optionDiv.appendChild(label);
-    return optionDiv;
-}
-
-// Updates the text of a dropdown button based on active filters for its category
-function updateDropdownButtonText(button, categoryConfig, filterSystem) {
-    const activeCategoryFilters = filterSystem.activeFilters.filter(
-        (f) => f.categoryId === categoryConfig.id
-    );
-
-    if (activeCategoryFilters.length === 0) {
-        button.textContent = "Showing all";
-    } else {
-        const hasAnyFilter = activeCategoryFilters.some(
-            (f) => f.value === ANY_FILTER_VALUE
-        );
-        const singularLabel = categoryConfig.label.toLowerCase();
-        const pluralLabel = singularLabel + "s";
-
-        if (hasAnyFilter) {
-            button.textContent = `Showing any ${singularLabel}`;
-        } else {
-            button.textContent = `Showing ${activeCategoryFilters.length} ${activeCategoryFilters.length === 1 ? singularLabel : pluralLabel
-                }`;
-        }
+        // Initial count update after all controls are populated
+        this._updateFilterOptionCounts(filterWrapper);
     }
-}
 
-// Updates the count display on all filter option labels
-function updateFilterOptionCounts(filterSystem, filterWrapperElement) {
-    const allCounts = filterSystem.getFilterCounts();
+    // Creates a single filter dropdown with header, clear link, and options
+    _createFilterDropdown(categoryConfig, filterWrapper) {
+        const column = document.createElement("div");
+        column.className = "filter-column"; // Assumes CSS
 
-    filterSystem.filterConfig.forEach((categoryConfig) => {
-        const categoryId = categoryConfig.id;
-        const countsForThisCategory = allCounts[categoryId] || {};
+        // Create header container to hold both heading and clear link
+        const headerContainer = document.createElement("div");
+        headerContainer.className = "filter-header";
+        headerContainer.style.display = "flex";
+        headerContainer.style.alignItems = "center";
+        headerContainer.style.gap = "8px";
 
-        // Find the specific dropdown content for this category
-        const dropdownButton = filterWrapperElement.querySelector(
-            `#dropdown-button-${categoryId}`
-        );
-        const dropdownContentElement = dropdownButton
-            ?.closest(".dropdown-container")
-            ?.querySelector(".dropdown-content");
+        const heading = document.createElement("h2");
+        heading.textContent = categoryConfig.label;
+        headerContainer.appendChild(heading);
 
-        if (!dropdownContentElement) return;
+        // Add clear link
+        const clearLink = document.createElement("a");
+        clearLink.className = "category-clear-link";
+        clearLink.href = "#";
+        clearLink.textContent = "(clear filters)";
+        clearLink.style.fontSize = "12px";
+        clearLink.style.color = "var(--near-black)";
+        clearLink.style.textDecoration = "underline";
+        clearLink.style.display = "none"; // Initially hidden
 
-        dropdownContentElement
-            .querySelectorAll(".dropdown-option")
-            .forEach((optionDiv) => {
-                const checkbox = optionDiv.querySelector(
+        const dropdownContainer = document.createElement("div"); // Define dropdownContainer here to be in scope for clearLink listener
+        dropdownContainer.className = "dropdown-container";
+
+        const dropdownButton = document.createElement("button"); // Define dropdownButton here
+        dropdownButton.className = "dropdown-button";
+        dropdownButton.id = `dropdown-button-${categoryConfig.id}`;
+
+        clearLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            // Remove all filters for this category
+            this.activeFilters = this.activeFilters.filter(
+                (f) => f.categoryId !== categoryConfig.id
+            );
+            // Uncheck all checkboxes in this dropdown
+            const dropdownContent =
+                dropdownContainer.querySelector(".dropdown-content"); // find dropdownContent
+            if (dropdownContent) {
+                const checkboxes = dropdownContent.querySelectorAll(
                     'input[type="checkbox"]'
                 );
-                const label = optionDiv.querySelector("label");
-                if (!checkbox || !label) return;
+                checkboxes.forEach((cb) => (cb.checked = false));
+            }
+            // Update UI
+            this.applyFilters();
+            this._updateDropdownButtonText(dropdownButton, categoryConfig);
+            this._updateFilterOptionCounts(filterWrapper);
+            clearLink.style.display = "none";
+        });
 
-                const value = checkbox.value;
-                const count = countsForThisCategory[value] || 0;
+        headerContainer.appendChild(clearLink);
+        column.appendChild(headerContainer);
 
-                // Use the stored original label text
-                const originalLabelText =
-                    checkbox.dataset.originalLabelText ||
-                    (value === ANY_FILTER_VALUE
-                        ? `Any ${categoryConfig.label.toLowerCase()}`
-                        : String(value));
+        this._updateDropdownButtonText(dropdownButton, categoryConfig); // Initial text
 
-                label.textContent = `${originalLabelText} (${count})`;
-                // Disable if count is 0 and not currently checked (to allow unchecking)
-                optionDiv.classList.toggle(
-                    "disabled",
-                    count === 0 && !checkbox.checked
-                );
-            });
-    });
+        // Update clear link visibility based on active filters
+        const updateClearLinkVisibility = () => {
+            const hasActiveFilters = this.activeFilters.some(
+                (f) => f.categoryId === categoryConfig.id
+            );
+            clearLink.style.display = hasActiveFilters ? "block" : "none";
+        };
+        updateClearLinkVisibility(); // Initial state
+
+        dropdownButton.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const currentDropdownContent =
+                dropdownContainer.querySelector(".dropdown-content");
+            filterWrapper
+                .querySelectorAll(".dropdown-content.show")
+                .forEach((otherContent) => {
+                    if (otherContent !== currentDropdownContent) {
+                        otherContent.classList.remove("show");
+                    }
+                });
+            if (currentDropdownContent) {
+                currentDropdownContent.classList.toggle("show");
+            }
+        });
+        dropdownContainer.appendChild(dropdownButton);
+
+        const dropdownContent = document.createElement("div"); // This is the dropdownContent for checkboxes
+        dropdownContent.className = "dropdown-content";
+
+        // "Any" option
+        if (categoryConfig.includeAny) {
+            const anyOptionDiv = this._createCheckboxOption(
+                ANY_FILTER_VALUE,
+                `Any ${categoryConfig.label.toLowerCase()}`,
+                categoryConfig,
+                dropdownButton,
+                dropdownContent, // Pass this specific dropdownContent
+                updateClearLinkVisibility, // Pass the update function
+                filterWrapper
+            );
+            dropdownContent.appendChild(anyOptionDiv);
+        }
+
+        // Unique value options
+        const values = this.uniqueFilterValues[categoryConfig.id] || []; // Added || []
+        values.forEach((value) => {
+            const optionDiv = this._createCheckboxOption(
+                value,
+                String(value), // Label for the option
+                categoryConfig,
+                dropdownButton,
+                dropdownContent, // Pass this specific dropdownContent
+                updateClearLinkVisibility, // Pass the update function
+                filterWrapper
+            );
+            dropdownContent.appendChild(optionDiv);
+        });
+
+        dropdownContainer.appendChild(dropdownContent);
+        column.appendChild(dropdownContainer);
+        return column;
+    }
+
+    // Creates a checkbox option for a dropdown with proper event handling
+    _createCheckboxOption(
+        value,
+        labelText,
+        categoryConfig,
+        dropdownButton,
+        dropdownContentElement, // This is the content element for THIS dropdown
+        updateClearLinkVisibility,
+        filterWrapper // Pass filterWrapper for _updateFilterOptionCounts
+    ) {
+        const optionDiv = document.createElement("div");
+        optionDiv.className = "dropdown-option";
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.value = value;
+        checkbox.id = `filter-${categoryConfig.id}-${String(value)
+            .replace(/\s+/g, "-")
+            .replace(/[^a-zA-Z0-9-]/g, "")}`;
+        checkbox.checked = this.activeFilters.some(
+            (f) => f.categoryId === categoryConfig.id && f.value === value
+        );
+        checkbox.className = "filter-checkbox";
+
+        // Add custom checkbox styles to ensure cross-browser compatibility
+        const style = document.createElement("style");
+        if (!document.querySelector("#filter-checkbox-styles")) {
+            style.id = "filter-checkbox-styles";
+            style.textContent = `
+                .filter-checkbox {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    width: 16px;
+                    height: 16px;
+                    border: 2px solid #ccc;
+                    border-radius: 3px;
+                    outline: none;
+                    cursor: pointer;
+                    position: relative;
+                    background: white;
+                }
+                .filter-checkbox:checked {
+                    background-color: var(--color-4);
+                    border-color: var(--color-4);
+                }
+                .filter-checkbox:checked::after {
+                    content: '';
+                    position: absolute;
+                    left: 3px;
+                    top: 0px;
+                    width: 4px;
+                    height: 8px;
+                    border: solid white;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // Store the original label text without count for reconstruction
+        checkbox.dataset.originalLabelText = labelText;
+
+        const label = document.createElement("label");
+        label.htmlFor = checkbox.id;
+        // Initial label text set here (will be updated with counts by _updateFilterOptionCounts)
+        label.textContent = labelText;
+
+        // Create a function to handle the checkbox change logic
+        const handleCheckboxChange = () => {
+            const categoryId = categoryConfig.id;
+            const isThisAnyCheckbox = value === ANY_FILTER_VALUE;
+
+            if (checkbox.checked) {
+                if (isThisAnyCheckbox) {
+                    dropdownContentElement // Use the passed specific dropdownContentElement
+                        .querySelectorAll('input[type="checkbox"]')
+                        .forEach((cb) => {
+                            if (cb !== checkbox) {
+                                cb.checked = false;
+                            }
+                        });
+                    this.activeFilters = this.activeFilters.filter(
+                        (f) => f.categoryId !== categoryId
+                    );
+                    this.addFilter(categoryId, ANY_FILTER_VALUE);
+                } else {
+                    if (categoryConfig.includeAny) {
+                        const anyCheckbox =
+                            dropdownContentElement.querySelector(
+                                // Use specific dropdownContentElement
+                                `input[type="checkbox"][value="${ANY_FILTER_VALUE}"]`
+                            );
+                        if (anyCheckbox && anyCheckbox.checked) {
+                            anyCheckbox.checked = false;
+                            this.removeFilter(categoryId, ANY_FILTER_VALUE);
+                        }
+                    }
+                    this.addFilter(categoryId, value);
+                }
+            } else {
+                this.removeFilter(categoryId, value);
+            }
+
+            this.applyFilters(); // Apply filters to the calendar/DOM
+            this._updateDropdownButtonText(dropdownButton, categoryConfig); // Update the main button text
+            // Update counts for all categories. Pass the main filterWrapper.
+            this._updateFilterOptionCounts(filterWrapper); // Use passed filterWrapper
+            updateClearLinkVisibility(); // Update clear link visibility
+        };
+
+        // Add click handler to the entire div
+        optionDiv.addEventListener("click", (e) => {
+            // Don't handle clicks on the checkbox or label - let their native events handle it
+            if (e.target !== checkbox && e.target !== label) {
+                checkbox.checked = !checkbox.checked;
+                handleCheckboxChange();
+            }
+        });
+
+        // Handle the checkbox change event
+        checkbox.addEventListener("change", handleCheckboxChange);
+
+        optionDiv.appendChild(checkbox);
+        optionDiv.appendChild(label);
+        return optionDiv;
+    }
+
+    // Updates the text of a dropdown button based on active filters for its category
+    _updateDropdownButtonText(button, categoryConfig) {
+        const activeCategoryFilters = this.activeFilters.filter(
+            (f) => f.categoryId === categoryConfig.id
+        );
+
+        if (activeCategoryFilters.length === 0) {
+            button.textContent = "Showing all";
+        } else {
+            const hasAnyFilter = activeCategoryFilters.some(
+                (f) => f.value === ANY_FILTER_VALUE
+            );
+            const singularLabel = categoryConfig.label.toLowerCase();
+            const pluralLabel = singularLabel + "s";
+
+            if (hasAnyFilter) {
+                button.textContent = `Showing any ${singularLabel}`;
+            } else {
+                button.textContent = `Showing ${activeCategoryFilters.length} ${
+                    activeCategoryFilters.length === 1
+                        ? singularLabel
+                        : pluralLabel
+                }`;
+            }
+        }
+    }
+
+    // Updates the count display on all filter option labels
+    _updateFilterOptionCounts(filterWrapperElement) {
+        const allCounts = this.getFilterCounts();
+
+        this.filterConfig.forEach((categoryConfig) => {
+            const categoryId = categoryConfig.id;
+            const countsForThisCategory = allCounts[categoryId] || {};
+
+            // Find the specific dropdown content for this category
+            const dropdownButton = filterWrapperElement.querySelector(
+                `#dropdown-button-${categoryId}`
+            );
+            const dropdownContentElement = dropdownButton
+                ?.closest(".dropdown-container")
+                ?.querySelector(".dropdown-content");
+
+            if (!dropdownContentElement) return;
+
+            dropdownContentElement
+                .querySelectorAll(".dropdown-option")
+                .forEach((optionDiv) => {
+                    const checkbox = optionDiv.querySelector(
+                        'input[type="checkbox"]'
+                    );
+                    const label = optionDiv.querySelector("label");
+                    if (!checkbox || !label) return;
+
+                    const value = checkbox.value;
+                    const count = countsForThisCategory[value] || 0;
+
+                    // Use the stored original label text
+                    const originalLabelText =
+                        checkbox.dataset.originalLabelText ||
+                        (value === ANY_FILTER_VALUE
+                            ? `Any ${categoryConfig.label.toLowerCase()}`
+                            : String(value));
+
+                    label.textContent = `${originalLabelText} (${count})`;
+                    // Disable if count is 0 and not currently checked (to allow unchecking)
+                    optionDiv.classList.toggle(
+                        "disabled",
+                        count === 0 && !checkbox.checked
+                    );
+                });
+        });
+    }
 }
 
-export { FilterSystem, populateFilterControls };
+export { FilterSystem };

@@ -15,7 +15,7 @@
 
         import { DetailsPanel } from './js/details-panel.js';
         import { CalendarChart } from './js/chart.js';
-        import { FilterSystem, populateFilterControls } from './js/filter-system.js';
+        import { FilterSystem } from './js/filter-system.js';
 
         const colorConditions = [
             {
@@ -76,7 +76,7 @@
         ];
 
         const filterSystem = new FilterSystem(chartData.records, filterConfig);
-        populateFilterControls("filter-controls-area", filterSystem);
+        filterSystem.populateFilterControls("filter-controls-area");
 
         const detailsPanelManager = new DetailsPanel('details-panel');
         detailsPanelManager.init(chart);
