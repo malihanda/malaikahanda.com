@@ -103,7 +103,7 @@ export class DetailsPanel {
         const chartContainerRightBound =
             this.chartContainer.getBoundingClientRect().right;
         const shouldBeNarrow =
-            chartContainerRightBound > window.innerWidth - 300;
+            chartContainerRightBound > window.innerWidth - 330;
         this.panelElement.classList.toggle("narrow", shouldBeNarrow);
         this._updateChartPadding();
     }
