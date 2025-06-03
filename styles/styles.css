@@ -415,11 +415,64 @@ h2 {
 /* It might look something like this, or be adjusted based on existing rules: */
 .filter-controls {
     display: grid;
-    /* Example: repeat(auto-fit, minmax(200px, 1fr)) for responsiveness */
-    /* or the original repeat(4, 1fr) if fixed columns are desired */
+
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     margin-bottom: 20px; /* Or keep existing margin */
     box-sizing: border-box;
     width: 100%; /* Important for fitting into filter-wrapper */
+}
+
+.clear-all-link {
+    text-decoration: underline;
+}
+
+.category-clear-link {
+    font-size: 12px;
+    color: var(--near-black);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.filter-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Styles for the custom checkboxes */
+
+.filter-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background: white;
+}
+
+.filter-checkbox:checked {
+    background-color: var(--color-4);
+    border-color: var(--color-4);
+}
+
+.filter-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 0px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 } 
