@@ -1,17 +1,18 @@
 :root {
     --cell-size: 15px;
     --cell-gap: 4px;
-    --color-1: #e8e8e8;
-    --color-2: #dd95ed;
-    --color-3: #b01c72;
-    --color-4: #460050;
+    --background-color: {{ theme_colors.background }};
+    --color-1: {{ theme_colors.get('color-1') }};
+    --color-2: {{ theme_colors.get('color-2') }};
+    --color-3: {{ theme_colors.get('color-3') }};
+    --color-4: {{ theme_colors.get('color-4') }};
     --near-black: #333;
     --grid-width: calc(54 * var(--cell-size) + 53 * var(--cell-gap)); /* 1022px, sort of a magic number throughout this layout */
 }
 
 body {
     font-family: monospace;
-    background: #b3b3b3;
+    background: var(--background-color);
     color: var(--near-black);
     padding: 20px;
 }
