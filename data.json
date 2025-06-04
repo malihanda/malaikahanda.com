@@ -469,7 +469,7 @@
         "size": "full-size",
         "url": "https://www.nytimes.com/crosswords/game/daily/2025/03/07",
         "puz": "",
-        "pdf": "",
+        "pdf": "20250307_nyt_untitled.pdf",
         "date": "2025-03-07",
         "category": "puzzle"
     },
@@ -1765,7 +1765,7 @@
         "size": "full-size",
         "url": "https://www.nytimes.com/crosswords/game/daily/2024/07/12",
         "puz": "",
-        "pdf": "",
+        "pdf": "20240712_nyt_untitled.pdf",
         "date": "2024-07-12",
         "category": "puzzle"
     },
@@ -1878,7 +1878,7 @@
         "size": "full-size",
         "url": "https://newyorkwarcrimes.com/crossword-puzzle-june-27-2024",
         "puz": "",
-        "pdf": "",
+        "pdf": "20240627_nywc_all-talk.pdf",
         "date": "2024-06-27",
         "category": "puzzle"
     },
@@ -2147,7 +2147,7 @@
         "size": "full-size",
         "url": "https://www.nytimes.com/crosswords/game/daily/2024/05/06",
         "puz": "",
-        "pdf": "",
+        "pdf": "20240506_nyt_untitled.pdf",
         "date": "2024-05-06",
         "category": "puzzle"
     },
@@ -6767,8 +6767,8 @@
         "type": "themed",
         "size": "full-size",
         "url": "",
-        "puz": "",
-        "pdf": "",
+        "puz": "20211111_usa-today_powerpuff-girls.puz",
+        "pdf": "20211111_usa-today_powerpuff-girls.pdf",
         "date": "2021-11-11",
         "category": "puzzle"
     },
@@ -6897,8 +6897,8 @@
         "type": "themed",
         "size": "full-size",
         "url": "",
-        "puz": "",
-        "pdf": "",
+        "puz": "20210928_usa-today_laughing-on-the-inside.puz",
+        "pdf": "20210928_usa-today_laughing-on-the-inside.pdf",
         "date": "2021-09-28",
         "category": "puzzle"
     },
@@ -6923,8 +6923,8 @@
         "type": "themed",
         "size": "full-size",
         "url": "",
-        "puz": "",
-        "pdf": "",
+        "puz": "20210924_usa-today_volleyball-finals.puz",
+        "pdf": "20210924_usa-today_volleyball-finals.pdf",
         "date": "2021-09-24",
         "category": "puzzle"
     },
@@ -6975,8 +6975,8 @@
         "type": "themed",
         "size": "full-size",
         "url": "",
-        "puz": "",
-        "pdf": "",
+        "puz": "20210823_usa-today_bowled-over.puz",
+        "pdf": "20210823_usa-today_bowled-over.pdf",
         "date": "2021-08-23",
         "category": "puzzle"
     },
@@ -7145,8 +7145,8 @@
         "type": "themed",
         "size": "full-size",
         "url": "",
-        "puz": "",
-        "pdf": "",
+        "puz": "20210621_usa-today_pj-party.puz",
+        "pdf": "20210621_usa-today_pj-party.pdf",
         "date": "2021-06-21",
         "category": "puzzle"
     },
