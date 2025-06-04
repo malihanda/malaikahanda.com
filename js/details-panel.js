@@ -168,12 +168,12 @@ export class DetailsPanel {
                             <div class="download-links">
                                 Download: ${
                                     record.puz
-                                        ? `<a href="${record.puz}" target="_blank">puz</a>`
+                                        ? `<a href="${record.puz.startsWith("http") ? record.puz : `/assets/puz_files/${record.puz}`}" target="_blank">puz</a>`
                                         : ""
                                 }
                                 ${
                                     record.pdf
-                                        ? `<a href="${record.pdf}" target="_blank">pdf</a>`
+                                        ? `<a href="${record.pdf.startsWith("http") ? record.pdf : `/assets/pdfs/${record.pdf}`}" target="_blank">pdf</a>`
                                         : ""
                                 }
                             </div>
