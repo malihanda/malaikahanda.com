@@ -34,8 +34,7 @@ def generate_favicons(colors, output_dir):
     draw.rectangle([quad_size, quad_size, base_size, base_size], fill=colors['color-1'])
 
     sizes_png = {
-        "favicon-16x16.png": 16,
-        "favicon-32x32.png": 32,
+        "favicon.png": 96,
         "apple-touch-icon.png": 180,
         "android-chrome-192x192.png": 192,
     }

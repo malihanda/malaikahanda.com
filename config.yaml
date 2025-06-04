@@ -12,6 +12,7 @@ theme_colors:
     color-2: "#dd95ed"
     color-3: "#b01c72"
     color-4: "#460050"
+    theme-color: "background"
 
 bio:
   intro: >-
