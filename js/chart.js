@@ -276,8 +276,8 @@ export class CalendarChart {
             }
 
             cell.className = `date-cell ${
-                hasContent ? "contains-data-cell" : ""
-            } ${colorClass} ${date.filtered ? "filtered" : ""}`;
+                hasContent ? "contains-data-cell" : ""}`;
+            cell.style.backgroundColor = `var(--${colorClass})`;
 
             this.setDateCellData(cell, date);
 

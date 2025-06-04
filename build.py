@@ -3,6 +3,7 @@ import json
 import random
 import shutil
 import urllib.parse
+import subprocess
 
 import yaml
 
@@ -20,6 +21,35 @@ DATA_FILE = 'data.json'
 OUTPUT_DIR = '_site'
 STATIC_DIRS = ['js', 'assets'] 
 STATIC_FILES = [DATA_FILE, 'og-image.png']
+
+def get_css_version_hash(css_template_path_in_repo):
+    """
+    Gets the short git commit hash of the last commit that modified the CSS template.
+    Returns a short hash string or None if git command fails or not in a git repo.
+    """
+    try:
+        check_process = subprocess.run(
+            ['git', 'ls-files', '--error-unmatch', css_template_path_in_repo],
+            capture_output=True, text=True, check=False, cwd=os.getcwd() # Ensure CWD is repo root if script isn't
+        )
+        if check_process.returncode != 0:
+            print(f"Warning: CSS file '{css_template_path_in_repo}' is not tracked by Git or not in a Git repo. Cannot get version hash.")
+            return None
+
+        process = subprocess.run(
+            ['git', 'log', '-1', '--pretty=format:%h', '--', css_template_path_in_repo],
+            capture_output=True, text=True, check=True, cwd=os.getcwd()
+        )
+        return process.stdout.strip()
+    except FileNotFoundError:
+        print("Warning: Git command not found. Cannot get CSS version hash.")
+        return None
+    except subprocess.CalledProcessError as e:
+        print(f"Warning: Git command failed while getting CSS version hash: {e}")
+        return None
+    except Exception as e:
+        print(f"Warning: An unexpected error occurred while getting CSS version hash: {e}")
+        return None
 
 def generate_favicons(colors, output_dir):
     os.makedirs(output_dir, exist_ok=True)
@@ -122,6 +152,9 @@ def main():
     if not os.path.exists('og-image.png'):
         generate_og_image(theme_colors)
 
+    css_version = get_css_version_hash(os.path.join(CSS_SRC_DIR, CSS_TEMPLATE_NAME))
+    print(f"CSS version: {css_version}")
+
     html_env = Environment(
         loader=FileSystemLoader(TEMPLATE_DIR),
         autoescape=select_autoescape(['html'])
@@ -135,7 +168,7 @@ def main():
 
     # Render the main HTML template
     index_template = html_env.get_template(INDEX_TEMPLATE_NAME)
-    output_html = index_template.render(config=config)
+    output_html = index_template.render(config=config, css_version=css_version)
     with open(os.path.join(OUTPUT_DIR, 'index.html'), 'w', encoding='utf-8') as f:
         f.write(output_html)
     print(f"Rendered index.html")

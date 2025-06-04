@@ -98,22 +98,6 @@ section#footer {
     cursor: pointer;
 }
 
-.color-1 {
-    background-color: var(--color-1);
-}
-
-.color-2 {
-    background-color: var(--color-2);
-}
-
-.color-3 {
-    background-color: var(--color-3);
-}
-
-.color-4 {
-    background-color: var(--color-4);
-}
-
 .year-section {
     margin-bottom: 40px;
 }
