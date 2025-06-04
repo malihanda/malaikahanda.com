@@ -2,6 +2,7 @@ import os
 import json
 import random
 import shutil
+import urllib.parse
 
 import yaml
 
@@ -19,7 +20,6 @@ DATA_FILE = 'data.json'
 OUTPUT_DIR = '_site'
 STATIC_DIRS = ['js', 'assets'] 
 STATIC_FILES = [DATA_FILE, 'og-image.png']
-FAVICON_OUTPUT_DIR = OUTPUT_DIR
 
 def generate_favicons(colors, output_dir):
     os.makedirs(output_dir, exist_ok=True)
@@ -110,12 +110,15 @@ def main():
         if 'bio' in config and 'intro' in config['bio']:
             config['bio']['intro'] = config['bio']['intro'].format(crossword_count=str(crossword_count))
 
+    if not config['site_info']['share_image'].startswith('http'):
+        config['site_info']['share_image'] = urllib.parse.urljoin(config['site_info']['url'], config['site_info']['share_image'])
+
     # Extract theme colors for favicon and CSS processing
     theme_colors = config['theme_colors']
 
     print(f"Using theme colors: {theme_colors}")
 
-    generate_favicons(theme_colors, FAVICON_OUTPUT_DIR)
+    generate_favicons(theme_colors, OUTPUT_DIR)
     if not os.path.exists('og-image.png'):
         generate_og_image(theme_colors)
 
