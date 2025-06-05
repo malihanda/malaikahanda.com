@@ -25,8 +25,8 @@
     <link rel="icon" href="/favicon.png" type="image/png" sizes="96x96">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
 
-    {% if css_version %}<link rel="stylesheet" href="/styles/styles.css?v={{ css_version }}">
-    {% else %}<link rel="stylesheet" href="/styles/styles.css">{% endif %}
+    {% if css_version %}<link rel="stylesheet" href="./styles/styles.css?v={{ css_version }}">
+    {% else %}<link rel="stylesheet" href="./styles/styles.css">{% endif %}
 </head>
 <body>
     <section id="bio">
@@ -97,7 +97,7 @@
         });
         
         // Load and render initial data
-        await chart.loadData('/data.json'); // This path will need to be relative to the _site directory
+        await chart.loadData('./data.json'); // This path will need to be relative to the _site directory
         chart.render();
 
         const filterConfig = [
