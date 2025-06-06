@@ -39,6 +39,10 @@ jobs:
           echo "changed=false" >> $GITHUB_OUTPUT
         fi
         
+    - name: Set job output
+      id: set-output
+      run: echo "changed=${{ steps.verify-changed-files.outputs.changed }}" >> $GITHUB_OUTPUT
+
     - name: Commit and push changes
       if: steps.verify-changed-files.outputs.changed == 'true'
       env:
@@ -51,7 +55,7 @@ jobs:
         git push
 
     outputs:
-      changed: ${{ steps.verify-changed-files.outputs.changed }}
+      changed: ${{ steps.set-output.outputs.changed }}
 
   call-build-workflow:
     needs: update-data
