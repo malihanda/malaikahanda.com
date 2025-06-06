@@ -50,6 +50,9 @@ jobs:
         git commit -m "Update chart data - $(date +"%Y-%m-%d %H:%M:%S %Z")"
         git push
 
+    outputs:
+      changed: ${{ steps.verify-changed-files.outputs.changed }}
+
   call-build-workflow:
     needs: update-data
     if: needs.update-data.outputs.changed == 'true'
