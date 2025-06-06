@@ -49,3 +49,9 @@ jobs:
         git add data.json
         git commit -m "Update chart data - $(date +"%Y-%m-%d %H:%M:%S %Z")"
         git push
+
+  call-build-workflow:
+    needs: update-data
+    if: needs.update-data.outputs.changed == 'true'
+    name: Trigger build workflow
+    uses: ./.github/workflows/build-and-deploy.yaml
