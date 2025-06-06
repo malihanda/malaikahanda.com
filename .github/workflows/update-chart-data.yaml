@@ -57,8 +57,14 @@ jobs:
     outputs:
       changed: ${{ steps.set-output.outputs.changed }}
 
-  call-build-workflow:
+  trigger-build:
     needs: update-data
+    runs-on: ubuntu-latest
     if: needs.update-data.outputs.changed == 'true'
-    name: Trigger build workflow
-    uses: ./.github/workflows/build-and-deploy.yaml
+    steps:
+      - name: Trigger build workflow
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: chart-data-updated
+          client-payload: '{"source": "update-chart-data", "timestamp": "${{ github.event.repository.updated_at }}"}'
