@@ -1,5 +1,14 @@
 [
     {
+        "publication": "Broccoli and Ice Cream",
+        "type": "podcast",
+        "title": "Episode 2388",
+        "publish date": "6/21/2025",
+        "url": "https://broccoliandicecream.libsyn.com/388-malaika-handa-and-crossword-construction",
+        "date": "2025-06-21",
+        "category": "misc"
+    },
+    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Rubber Duck Puzzle",
@@ -2711,6 +2720,15 @@
         "pdf": "",
         "date": "2024-02-02",
         "category": "puzzle"
+    },
+    {
+        "publication": "SF Gate",
+        "type": "article",
+        "title": "The Crossword Show",
+        "publish date": "2/2/2024",
+        "url": "https://www.sfgate.com/sf-culture/article/crazy-ex-girlfriend-alum-dazzles-san-francisco-18637586.php",
+        "date": "2024-02-02",
+        "category": "misc"
     },
     {
         "publication": "Vulture",
