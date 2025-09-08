@@ -13,6 +13,15 @@
         "category": "puzzle"
     },
     {
+        "publication": "rexwordpuzzle",
+        "type": "write-up",
+        "title": "Michael B. Berg's Wednesday puzzle",
+        "publish date": "9/3/2025",
+        "url": "https://rexwordpuzzle.blogspot.com/2025/09/protein-in-nicoise-salad-wed-9-2-25.html",
+        "date": "2025-09-03",
+        "category": "misc"
+    },
+    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Whistleblower Puzzle",
@@ -143,9 +152,9 @@
         "category": "puzzle"
     },
     {
-        "publication": "Lollapuzzoola Championship Puzzle",
+        "publication": "Lollapuzzoola",
         "collaborator": "",
-        "title": "untitled",
+        "title": "Championship Puzzle",
         "publish date": "8/9/2025",
         "type": "themeless",
         "size": "full-size",
