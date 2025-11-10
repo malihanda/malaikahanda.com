@@ -1,3 +1,13 @@
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#   "jinja2~=3.1",
+#   "markdown2~=2.5",
+#   "pillow~=12.0",
+#   "pyyaml~=6.0"
+# ]
+# ///
+
 import os
 import json
 import random
