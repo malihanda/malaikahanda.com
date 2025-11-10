@@ -194,6 +194,16 @@ def main():
     except Exception as e:
         print(f"Error processing CSS template: {e}")
 
+    # Create redirects
+    redirect_template = html_env.get_template('redirect.html.jinja')
+    for src, dest in config.get('redirects', {}).items():
+        redirect_html = redirect_template.render(dest=dest)
+        os.makedirs(os.path.join(OUTPUT_DIR, src))
+        with open(os.path.join(OUTPUT_DIR, src, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(redirect_html)
+        print(f"Rendered redirect from /{src} to {dest}")
+
+
     # Copy other static files and data.json
     for static_dir in STATIC_DIRS:
         if os.path.exists(static_dir):
