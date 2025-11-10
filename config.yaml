@@ -33,3 +33,6 @@ bio:
 footer:
   text: >-
     This website was built by [Parker](https://parkerhiggins.net).
+
+redirects:
+  book: "https://www.hachettebookgroup.com/titles/malaika-handa/pause-for-puzzles-easy-crosswords-for-peace/9781454960287/"
