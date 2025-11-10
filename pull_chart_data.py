@@ -1,4 +1,9 @@
-#!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#   "gspread~=6.2"
+# ]
+# ///
 
 import json
 import os
