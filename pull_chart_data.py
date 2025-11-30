@@ -30,7 +30,6 @@ def main():
     for r in puzzles:
         r['date'] = datetime.strptime(r['publish date'], '%m/%d/%Y').date().isoformat()
         r.pop('payment')
-        r.pop('accepted')
         r['category'] = 'puzzle'
 
  
