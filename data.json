@@ -2,6 +2,19 @@
     {
         "publication": "Vulture",
         "collaborator": "",
+        "title": "The Travel Writer Puzzle",
+        "publish date": "1/2/2026",
+        "type": "themeless",
+        "size": "midi",
+        "url": "https://www.vulture.com/article/daily-crossword-puzzle-january-2-2025.html",
+        "puz": "",
+        "pdf": "",
+        "date": "2026-01-02",
+        "category": "puzzle"
+    },
+    {
+        "publication": "Vulture",
+        "collaborator": "",
         "title": "The Lightning & Thunder Puzzle",
         "publish date": "12/26/2025",
         "type": "themeless",
@@ -700,19 +713,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "Lil AVC X",
-        "collaborator": "",
-        "title": "\"Make a wish!\"",
-        "publish date": "8/12/2025",
-        "type": "themeless",
-        "size": "midi",
-        "url": "https://avxwords.com/puzzles/1877/",
-        "puz": "",
-        "pdf": "",
-        "date": "2025-08-12",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Guitarist Puzzle",
@@ -720,6 +720,19 @@
         "type": "themeless",
         "size": "midi",
         "url": "https://www.vulture.com/article/daily-crossword-puzzle-august-12-2025.html",
+        "puz": "",
+        "pdf": "",
+        "date": "2025-08-12",
+        "category": "puzzle"
+    },
+    {
+        "publication": "Lil AVC X",
+        "collaborator": "",
+        "title": "\"Make a wish!\"",
+        "publish date": "8/12/2025",
+        "type": "themeless",
+        "size": "midi",
+        "url": "https://avxwords.com/puzzles/1877/",
         "puz": "",
         "pdf": "",
         "date": "2025-08-12",
@@ -1005,19 +1018,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "Puzzmo",
-        "collaborator": "",
-        "title": "Staying Classy",
-        "publish date": "6/25/2025",
-        "type": "themeless",
-        "size": "midi",
-        "url": "https://puzzmo.com/puzzle/2025-06-25/crossword",
-        "puz": "",
-        "pdf": "",
-        "date": "2025-06-25",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Communiverse Puzzle",
@@ -1025,6 +1025,19 @@
         "type": "themeless",
         "size": "midi",
         "url": "https://www.vulture.com/article/daily-crossword-puzzle-june-25-2025.html",
+        "puz": "",
+        "pdf": "",
+        "date": "2025-06-25",
+        "category": "puzzle"
+    },
+    {
+        "publication": "Puzzmo",
+        "collaborator": "",
+        "title": "Staying Classy",
+        "publish date": "6/25/2025",
+        "type": "themeless",
+        "size": "midi",
+        "url": "https://puzzmo.com/puzzle/2025-06-25/crossword",
         "puz": "",
         "pdf": "",
         "date": "2025-06-25",
@@ -1636,19 +1649,6 @@
         "category": "misc"
     },
     {
-        "publication": "Puzzmo",
-        "collaborator": "Stephen Lurie",
-        "title": "\"Seconds, please!\"",
-        "publish date": "3/3/2025",
-        "type": "themed",
-        "size": "midi",
-        "url": "https://www.puzzmo.com/puzzle/2025-03-03/crossword",
-        "puz": "",
-        "pdf": "",
-        "date": "2025-03-03",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Academy Puzzle",
@@ -1656,6 +1656,19 @@
         "type": "themeless",
         "size": "midi",
         "url": "https://www.vulture.com/article/daily-crossword-puzzle-march-3-2025.html",
+        "puz": "",
+        "pdf": "",
+        "date": "2025-03-03",
+        "category": "puzzle"
+    },
+    {
+        "publication": "Puzzmo",
+        "collaborator": "Stephen Lurie",
+        "title": "\"Seconds, please!\"",
+        "publish date": "3/3/2025",
+        "type": "themed",
+        "size": "midi",
+        "url": "https://www.puzzmo.com/puzzle/2025-03-03/crossword",
         "puz": "",
         "pdf": "",
         "date": "2025-03-03",
@@ -1688,19 +1701,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "Los Angeles Times",
-        "collaborator": "Stephen Lurie",
-        "title": "untitled",
-        "publish date": "2/24/2025",
-        "type": "themed",
-        "size": "full-size",
-        "url": "",
-        "puz": "",
-        "pdf": "",
-        "date": "2025-02-24",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Empyrean Puzzle",
@@ -1708,6 +1708,19 @@
         "type": "themeless",
         "size": "midi",
         "url": "https://www.vulture.com/article/daily-crossword-puzzle-february-24-2025.html",
+        "puz": "",
+        "pdf": "",
+        "date": "2025-02-24",
+        "category": "puzzle"
+    },
+    {
+        "publication": "Los Angeles Times",
+        "collaborator": "Stephen Lurie",
+        "title": "untitled",
+        "publish date": "2/24/2025",
+        "type": "themed",
+        "size": "full-size",
+        "url": "",
         "puz": "",
         "pdf": "",
         "date": "2025-02-24",
@@ -2709,19 +2722,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "USA Today",
-        "collaborator": "",
-        "title": "Ab Initio",
-        "publish date": "8/12/2024",
-        "type": "themed",
-        "size": "full-size",
-        "url": "",
-        "puz": "",
-        "pdf": "",
-        "date": "2024-08-12",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Squirrel Puzzle",
@@ -2729,6 +2729,19 @@
         "type": "themeless",
         "size": "midi",
         "url": "https://www.vulture.com/article/daily-crossword-puzzle-august-12-2024.html",
+        "puz": "",
+        "pdf": "",
+        "date": "2024-08-12",
+        "category": "puzzle"
+    },
+    {
+        "publication": "USA Today",
+        "collaborator": "",
+        "title": "Ab Initio",
+        "publish date": "8/12/2024",
+        "type": "themed",
+        "size": "full-size",
+        "url": "",
         "puz": "",
         "pdf": "",
         "date": "2024-08-12",
@@ -2897,19 +2910,6 @@
         "category": "misc"
     },
     {
-        "publication": "New York Times",
-        "collaborator": "",
-        "title": "untitled",
-        "publish date": "7/12/2024",
-        "type": "themed",
-        "size": "full-size",
-        "url": "https://www.nytimes.com/crosswords/game/daily/2024/07/12",
-        "puz": "",
-        "pdf": "20240712_nyt_untitled.pdf",
-        "date": "2024-07-12",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Occult Puzzle",
@@ -2919,6 +2919,19 @@
         "url": "https://www.vulture.com/article/daily-crossword-puzzle-july-12-2024.html",
         "puz": "",
         "pdf": "",
+        "date": "2024-07-12",
+        "category": "puzzle"
+    },
+    {
+        "publication": "New York Times",
+        "collaborator": "",
+        "title": "untitled",
+        "publish date": "7/12/2024",
+        "type": "themed",
+        "size": "full-size",
+        "url": "https://www.nytimes.com/crosswords/game/daily/2024/07/12",
+        "puz": "",
+        "pdf": "20240712_nyt_untitled.pdf",
         "date": "2024-07-12",
         "category": "puzzle"
     },
@@ -3810,19 +3823,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "USA Today",
-        "collaborator": "",
-        "title": "Down Payments",
-        "publish date": "1/25/2024",
-        "type": "themed",
-        "size": "full-size",
-        "url": "",
-        "puz": "",
-        "pdf": "",
-        "date": "2024-01-25",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Mafia Puzzle",
@@ -3830,6 +3830,19 @@
         "type": "themeless",
         "size": "midi",
         "url": "https://www.vulture.com/2024/01/daily-crossword-puzzle-january-25.html",
+        "puz": "",
+        "pdf": "",
+        "date": "2024-01-25",
+        "category": "puzzle"
+    },
+    {
+        "publication": "USA Today",
+        "collaborator": "",
+        "title": "Down Payments",
+        "publish date": "1/25/2024",
+        "type": "themed",
+        "size": "full-size",
+        "url": "",
         "puz": "",
         "pdf": "",
         "date": "2024-01-25",
@@ -4127,19 +4140,6 @@
         "category": "misc"
     },
     {
-        "publication": "USA Today",
-        "collaborator": "",
-        "title": "Lime Wedge",
-        "publish date": "12/4/2023",
-        "type": "themed",
-        "size": "full-size",
-        "url": "",
-        "puz": "",
-        "pdf": "",
-        "date": "2023-12-04",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Prison Puzzle",
@@ -4147,6 +4147,19 @@
         "type": "themeless",
         "size": "midi",
         "url": "https://www.vulture.com/2023/12/daily-crossword-puzzle-december-4.html",
+        "puz": "",
+        "pdf": "",
+        "date": "2023-12-04",
+        "category": "puzzle"
+    },
+    {
+        "publication": "USA Today",
+        "collaborator": "",
+        "title": "Lime Wedge",
+        "publish date": "12/4/2023",
+        "type": "themed",
+        "size": "full-size",
+        "url": "",
         "puz": "",
         "pdf": "",
         "date": "2023-12-04",
@@ -4705,19 +4718,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "AVCX+",
-        "collaborator": "",
-        "title": "Muchas Novias",
-        "publish date": "8/11/2023",
-        "type": "themeless",
-        "size": "full-size",
-        "url": "https://avxwords.com/puzzles/1389/",
-        "puz": "20230811_avcxplus_muchas-novias.puz",
-        "pdf": "20230811_avcxplus_muchas-novias.pdf",
-        "date": "2023-08-11",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Bloodsucker Puzzle",
@@ -4727,6 +4727,19 @@
         "url": "https://www.vulture.com/2023/08/daily-crossword-puzzle-august-11.html",
         "puz": "",
         "pdf": "",
+        "date": "2023-08-11",
+        "category": "puzzle"
+    },
+    {
+        "publication": "AVCX+",
+        "collaborator": "",
+        "title": "Muchas Novias",
+        "publish date": "8/11/2023",
+        "type": "themeless",
+        "size": "full-size",
+        "url": "https://avxwords.com/puzzles/1389/",
+        "puz": "20230811_avcxplus_muchas-novias.puz",
+        "pdf": "20230811_avcxplus_muchas-novias.pdf",
         "date": "2023-08-11",
         "category": "puzzle"
     },
@@ -5631,19 +5644,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "girlbosswords",
-        "collaborator": "",
-        "title": "Head First",
-        "publish date": "2/14/2023",
-        "type": "themed",
-        "size": "full-size",
-        "url": "https://www.girlbosswords.com/puzzle/head-first.html",
-        "puz": "20230214_girlbosswords_head-first.puz",
-        "pdf": "20230214_girlbosswords_head-first.pdf",
-        "date": "2023-02-14",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "Puzzle for the Girlies",
@@ -5653,6 +5653,19 @@
         "url": "https://www.vulture.com/2023/02/daily-crossword-puzzle-february-14.html",
         "puz": "",
         "pdf": "",
+        "date": "2023-02-14",
+        "category": "puzzle"
+    },
+    {
+        "publication": "girlbosswords",
+        "collaborator": "",
+        "title": "Head First",
+        "publish date": "2/14/2023",
+        "type": "themed",
+        "size": "full-size",
+        "url": "https://www.girlbosswords.com/puzzle/head-first.html",
+        "puz": "20230214_girlbosswords_head-first.puz",
+        "pdf": "20230214_girlbosswords_head-first.pdf",
         "date": "2023-02-14",
         "category": "puzzle"
     },
@@ -6170,19 +6183,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "Boswords",
-        "collaborator": "",
-        "title": "untitled",
-        "publish date": "10/17/2022",
-        "type": "themeless",
-        "size": "full-size",
-        "url": "",
-        "puz": "",
-        "pdf": "",
-        "date": "2022-10-17",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Vengeance Puzzle",
@@ -6190,6 +6190,19 @@
         "type": "themeless",
         "size": "midi",
         "url": "https://www.vulture.com/2022/10/daily-crossword-puzzle-october-17.html",
+        "puz": "",
+        "pdf": "",
+        "date": "2022-10-17",
+        "category": "puzzle"
+    },
+    {
+        "publication": "Boswords",
+        "collaborator": "",
+        "title": "untitled",
+        "publish date": "10/17/2022",
+        "type": "themeless",
+        "size": "full-size",
+        "url": "",
         "puz": "",
         "pdf": "",
         "date": "2022-10-17",
@@ -6970,6 +6983,19 @@
         "category": "puzzle"
     },
     {
+        "publication": "Vulture",
+        "collaborator": "",
+        "title": "The Sexual Tension Puzzle",
+        "publish date": "5/17/2022",
+        "type": "themeless",
+        "size": "midi",
+        "url": "https://www.vulture.com/2022/05/crossword-the-sexual-tension-puzzle.html",
+        "puz": "",
+        "pdf": "",
+        "date": "2022-05-17",
+        "category": "puzzle"
+    },
+    {
         "publication": "USA Today",
         "collaborator": "Matthew Stock",
         "title": "Junior High",
@@ -6985,14 +7011,14 @@
     {
         "publication": "Vulture",
         "collaborator": "",
-        "title": "The Sexual Tension Puzzle",
-        "publish date": "5/17/2022",
+        "title": "The Hot Puzzle",
+        "publish date": "5/16/2022",
         "type": "themeless",
         "size": "midi",
-        "url": "https://www.vulture.com/2022/05/crossword-the-sexual-tension-puzzle.html",
+        "url": "https://www.vulture.com/2022/05/crossword-the-hot-puzzle.html",
         "puz": "",
         "pdf": "",
-        "date": "2022-05-17",
+        "date": "2022-05-16",
         "category": "puzzle"
     },
     {
@@ -7003,19 +7029,6 @@
         "type": "themeless",
         "size": "midi",
         "url": "https://www.girlbosswords.com/puzzle/themeless-19.html",
-        "puz": "",
-        "pdf": "",
-        "date": "2022-05-16",
-        "category": "puzzle"
-    },
-    {
-        "publication": "Vulture",
-        "collaborator": "",
-        "title": "The Hot Puzzle",
-        "publish date": "5/16/2022",
-        "type": "themeless",
-        "size": "midi",
-        "url": "https://www.vulture.com/2022/05/crossword-the-hot-puzzle.html",
         "puz": "",
         "pdf": "",
         "date": "2022-05-16",
@@ -7118,19 +7131,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "USA Today",
-        "collaborator": "",
-        "title": "Tart Shells",
-        "publish date": "4/28/2022",
-        "type": "themed",
-        "size": "full-size",
-        "url": "",
-        "puz": "",
-        "pdf": "",
-        "date": "2022-04-28",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Spy Puzzle",
@@ -7138,6 +7138,19 @@
         "type": "themeless",
         "size": "midi",
         "url": "https://www.vulture.com/2022/04/crossword-the-spy-puzzle.html",
+        "puz": "",
+        "pdf": "",
+        "date": "2022-04-28",
+        "category": "puzzle"
+    },
+    {
+        "publication": "USA Today",
+        "collaborator": "",
+        "title": "Tart Shells",
+        "publish date": "4/28/2022",
+        "type": "themed",
+        "size": "full-size",
+        "url": "",
         "puz": "",
         "pdf": "",
         "date": "2022-04-28",
@@ -7157,19 +7170,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "USA Today",
-        "collaborator": "",
-        "title": "Mic Drop",
-        "publish date": "4/21/2022",
-        "type": "themed",
-        "size": "full-size",
-        "url": "",
-        "puz": "",
-        "pdf": "",
-        "date": "2022-04-21",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Thursday Puzzle",
@@ -7177,6 +7177,19 @@
         "type": "themeless",
         "size": "midi",
         "url": "https://www.vulture.com/2022/04/crossword-the-thursday-puzzle.html",
+        "puz": "",
+        "pdf": "",
+        "date": "2022-04-21",
+        "category": "puzzle"
+    },
+    {
+        "publication": "USA Today",
+        "collaborator": "",
+        "title": "Mic Drop",
+        "publish date": "4/21/2022",
+        "type": "themed",
+        "size": "full-size",
+        "url": "",
         "puz": "",
         "pdf": "",
         "date": "2022-04-21",
@@ -7279,19 +7292,6 @@
         "category": "misc"
     },
     {
-        "publication": "USA Today",
-        "collaborator": "Erik Agard",
-        "title": "Indentation",
-        "publish date": "4/5/2022",
-        "type": "themed",
-        "size": "full-size",
-        "url": "",
-        "puz": "",
-        "pdf": "",
-        "date": "2022-04-05",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Lakers Puzzle",
@@ -7299,6 +7299,19 @@
         "type": "themeless",
         "size": "midi",
         "url": "https://www.vulture.com/2022/04/crossword-the-lakers-puzzle.html",
+        "puz": "",
+        "pdf": "",
+        "date": "2022-04-05",
+        "category": "puzzle"
+    },
+    {
+        "publication": "USA Today",
+        "collaborator": "Erik Agard",
+        "title": "Indentation",
+        "publish date": "4/5/2022",
+        "type": "themed",
+        "size": "full-size",
+        "url": "",
         "puz": "",
         "pdf": "",
         "date": "2022-04-05",
@@ -7392,19 +7405,6 @@
         "category": "misc"
     },
     {
-        "publication": "girlbosswords",
-        "collaborator": "",
-        "title": "themeless 18: turn up",
-        "publish date": "3/17/2022",
-        "type": "themeless",
-        "size": "full-size",
-        "url": "https://www.girlbosswords.com/puzzle/themeless-18-turn-up.html",
-        "puz": "20220317_girlbosswords_themeless18.puz",
-        "pdf": "20220317_girlbosswords_themeless18.pdf",
-        "date": "2022-03-17",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Recovery Puzzle",
@@ -7414,6 +7414,19 @@
         "url": "https://www.vulture.com/2022/03/crossword-the-recovery-puzzle.html",
         "puz": "",
         "pdf": "",
+        "date": "2022-03-17",
+        "category": "puzzle"
+    },
+    {
+        "publication": "girlbosswords",
+        "collaborator": "",
+        "title": "themeless 18: turn up",
+        "publish date": "3/17/2022",
+        "type": "themeless",
+        "size": "full-size",
+        "url": "https://www.girlbosswords.com/puzzle/themeless-18-turn-up.html",
+        "puz": "20220317_girlbosswords_themeless18.puz",
+        "pdf": "20220317_girlbosswords_themeless18.pdf",
         "date": "2022-03-17",
         "category": "puzzle"
     },
@@ -8300,19 +8313,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "7xwords",
-        "collaborator": "",
-        "title": "June 17",
-        "publish date": "6/17/2021",
-        "type": "themeless",
-        "size": "midi",
-        "url": "https://www.7xwords.com/daily/06/06-17.html",
-        "puz": "",
-        "pdf": "",
-        "date": "2021-06-17",
-        "category": "puzzle"
-    },
-    {
         "publication": "girlbosswords",
         "collaborator": "",
         "title": "themeless 10: for mary",
@@ -8322,6 +8322,19 @@
         "url": "https://www.girlbosswords.com/puzzle/themeless-10-for-mary.html",
         "puz": "",
         "pdf": "20210617_girlbosswords_themeless10.pdf",
+        "date": "2021-06-17",
+        "category": "puzzle"
+    },
+    {
+        "publication": "7xwords",
+        "collaborator": "",
+        "title": "June 17",
+        "publish date": "6/17/2021",
+        "type": "themeless",
+        "size": "midi",
+        "url": "https://www.7xwords.com/daily/06/06-17.html",
+        "puz": "",
+        "pdf": "",
         "date": "2021-06-17",
         "category": "puzzle"
     },
@@ -8526,19 +8539,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "girlbosswords",
-        "collaborator": "Paolo Pasco",
-        "title": "*sad honk*",
-        "publish date": "3/14/2021",
-        "type": "themed",
-        "size": "midi",
-        "url": "https://www.girlbosswords.com/puzzle/sad-honk.html",
-        "puz": "",
-        "pdf": "20210314_girlbosswords_sad-honk.pdf",
-        "date": "2021-03-14",
-        "category": "puzzle"
-    },
-    {
         "publication": "Grids These Days",
         "collaborator": "Paolo Pasco",
         "title": "*sad honk* (remix)",
@@ -8548,6 +8548,19 @@
         "url": "https://gridsthesedays.blogspot.com/2021/03/puzzle-86-sad-honk-remix-with-malaika.html",
         "puz": "",
         "pdf": "",
+        "date": "2021-03-14",
+        "category": "puzzle"
+    },
+    {
+        "publication": "girlbosswords",
+        "collaborator": "Paolo Pasco",
+        "title": "*sad honk*",
+        "publish date": "3/14/2021",
+        "type": "themed",
+        "size": "midi",
+        "url": "https://www.girlbosswords.com/puzzle/sad-honk.html",
+        "puz": "",
+        "pdf": "20210314_girlbosswords_sad-honk.pdf",
         "date": "2021-03-14",
         "category": "puzzle"
     },
@@ -8765,19 +8778,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "7xwords",
-        "collaborator": "",
-        "title": "January 13",
-        "publish date": "1/13/2021",
-        "type": "themeless",
-        "size": "midi",
-        "url": "https://www.7xwords.com/daily/01/01-13.html",
-        "puz": "",
-        "pdf": "",
-        "date": "2021-01-13",
-        "category": "puzzle"
-    },
-    {
         "publication": "girlbosswords",
         "collaborator": "",
         "title": "themeless 4: hot in herre",
@@ -8787,6 +8787,19 @@
         "url": "https://www.girlbosswords.com/puzzle/themeless-4-hot-in-herre.html",
         "puz": "",
         "pdf": "20210113_girlbosswords_themeless04.pdf",
+        "date": "2021-01-13",
+        "category": "puzzle"
+    },
+    {
+        "publication": "7xwords",
+        "collaborator": "",
+        "title": "January 13",
+        "publish date": "1/13/2021",
+        "type": "themeless",
+        "size": "midi",
+        "url": "https://www.7xwords.com/daily/01/01-13.html",
+        "puz": "",
+        "pdf": "",
         "date": "2021-01-13",
         "category": "puzzle"
     },
