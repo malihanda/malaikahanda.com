@@ -3746,19 +3746,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "Puzzmo",
-        "collaborator": "",
-        "title": "Sweet & Spicy",
-        "publish date": "4/25/2024",
-        "type": "themeless",
-        "size": "midi",
-        "url": "",
-        "puz": "",
-        "pdf": "",
-        "date": "2024-04-25",
-        "category": "puzzle"
-    },
-    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Happy Place Puzzle",
@@ -3834,6 +3821,19 @@
         "puz": "",
         "pdf": "",
         "date": "2024-04-08",
+        "category": "puzzle"
+    },
+    {
+        "publication": "Puzzmo",
+        "collaborator": "",
+        "title": "Sweet & Spicy",
+        "publish date": "4/5/2024",
+        "type": "themeless",
+        "size": "midi",
+        "url": "",
+        "puz": "",
+        "pdf": "",
+        "date": "2024-04-05",
         "category": "puzzle"
     },
     {
