@@ -1,5 +1,36 @@
 [
     {
+        "publication": "The Writers' Center",
+        "collaborator": "",
+        "title": "untitled",
+        "publish date": "5/1/2026",
+        "type": "themed",
+        "size": "full-size",
+        "url": "https://www.puzzmo.com/play/crossword?puzzleSlug=aq262u1vts",
+        "puz": "",
+        "pdf": "",
+        "date": "2026-05-01",
+        "category": "puzzle"
+    },
+    {
+        "publication": "rexwordpuzzle",
+        "type": "write-up",
+        "title": "Rena Cohen's Friday puzzle",
+        "publish date": "5/1/2026",
+        "url": "https://rexwordpuzzle.blogspot.com/2026/05/spongy-exfoliator-fri-5-1-26-myosins.html",
+        "date": "2026-05-01",
+        "category": "misc"
+    },
+    {
+        "publication": "The Writers' Center",
+        "type": "article",
+        "title": "Puzzling Through: A Conversation with Malaika Handa",
+        "publish date": "5/1/2026",
+        "url": "https://writer.org/twc-magazine/",
+        "date": "2026-05-01",
+        "category": "misc"
+    },
+    {
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Shark Puzzle",
