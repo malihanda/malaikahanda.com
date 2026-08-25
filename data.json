@@ -2398,7 +2398,7 @@
         "url": "",
         "puz": "20250726_latimes_untitled.puz",
         "pdf": "20250726_latimes_untitled.pdf",
-        "filenametemp": "",
+        "filenametemp": "la-times/20250726_untitled",
         "date": "2025-07-26",
         "category": "puzzle"
     },
@@ -2477,7 +2477,7 @@
         "url": "",
         "puz": "20250712_apple_freestyle.puz",
         "pdf": "20250712_apple_freestyle.pdf",
-        "filenametemp": "",
+        "filenametemp": "apple/20250712_freestyle",
         "date": "2025-07-12",
         "category": "puzzle"
     },
@@ -3230,7 +3230,7 @@
         "url": "https://www.nytimes.com/crosswords/game/daily/2025/03/07",
         "puz": "",
         "pdf": "20250307_nyt_untitled.pdf",
-        "filenametemp": "",
+        "filenametemp": "nyt/20250307_untitled",
         "date": "2025-03-07",
         "category": "puzzle"
     },
@@ -3323,7 +3323,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "la-times/20250224_untitled",
         "date": "2025-02-24",
         "category": "puzzle"
     },
@@ -4026,7 +4026,7 @@
         "url": "https://defector.com/the-crossword-oct-21-sub-liminal-messages",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "defector/20241021_sub-liminal-messages",
         "date": "2024-10-21",
         "category": "puzzle"
     },
@@ -4068,7 +4068,7 @@
         "url": "https://crosshare.org/crosswords/dkTCJj3pmCmVgtwxuGit/themeless-85",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "modern/20241013_themeless-85",
         "date": "2024-10-13",
         "category": "puzzle"
     },
@@ -4417,7 +4417,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20240812_ab-initio",
         "date": "2024-08-12",
         "category": "puzzle"
     },
@@ -4616,7 +4616,7 @@
         "url": "https://www.nytimes.com/crosswords/game/daily/2024/07/12",
         "puz": "",
         "pdf": "20240712_nyt_untitled.pdf",
-        "filenametemp": "",
+        "filenametemp": "nyt/20240712_untitled",
         "date": "2024-07-12",
         "category": "puzzle"
     },
@@ -4737,7 +4737,7 @@
         "url": "https://newyorkwarcrimes.com/crossword-puzzle-june-27-2024",
         "puz": "",
         "pdf": "20240627_nywc_all-talk.pdf",
-        "filenametemp": "",
+        "filenametemp": "nywc/20240627_all-talk",
         "date": "2024-06-27",
         "category": "puzzle"
     },
@@ -5026,7 +5026,7 @@
         "url": "https://www.nytimes.com/crosswords/game/daily/2024/05/06",
         "puz": "",
         "pdf": "20240506_nyt_untitled.pdf",
-        "filenametemp": "",
+        "filenametemp": "nyt/20240506_untitled",
         "date": "2024-05-06",
         "category": "puzzle"
     },
@@ -5593,7 +5593,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20240125_down-payments",
         "date": "2024-01-25",
         "category": "puzzle"
     },
@@ -5635,7 +5635,7 @@
         "url": "",
         "puz": "20240119_apple_im-stuffed.puz",
         "pdf": "20240119_apple_im-stuffed.pdf",
-        "filenametemp": "",
+        "filenametemp": "apple/20240119_im-stuffed",
         "date": "2024-01-19",
         "category": "puzzle"
     },
@@ -5756,7 +5756,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "modern/20231231_themeless-55",
         "date": "2023-12-31",
         "category": "puzzle"
     },
@@ -5896,7 +5896,7 @@
         "url": "",
         "puz": "20231207_apple_freestyle.puz",
         "pdf": "20231207_apple_freestyle.pdf",
-        "filenametemp": "",
+        "filenametemp": "apple/20230712_freestyle",
         "date": "2023-12-07",
         "category": "puzzle"
     },
