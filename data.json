@@ -28,6 +28,20 @@
         "category": "puzzle"
     },
     {
+        "publication": "Vulture",
+        "collaborator": "",
+        "title": "The Conspiracy Puzzle",
+        "publish date": "8/17/2026",
+        "type": "themeless",
+        "size": "midi",
+        "url": "",
+        "puz": "",
+        "pdf": "",
+        "filenametemp": "",
+        "date": "2026-08-17",
+        "category": "puzzle"
+    },
+    {
         "publication": "girlbosswords",
         "collaborator": "",
         "title": "zohssword",
@@ -45,14 +59,14 @@
         "publication": "Vulture",
         "collaborator": "",
         "title": "The Final Girl Puzzle",
-        "publish date": "8/12/2026",
+        "publish date": "8/11/2026",
         "type": "themeless",
         "size": "midi",
         "url": "https://www.vulture.com/article/daily-crossword-puzzle-august-11-2026.html",
         "puz": "",
         "pdf": "",
         "filenametemp": "",
-        "date": "2026-08-12",
+        "date": "2026-08-11",
         "category": "puzzle"
     },
     {
@@ -8664,7 +8678,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20220714_starter-kits",
         "date": "2022-07-14",
         "category": "puzzle"
     },
@@ -9450,7 +9464,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "usa-today/20220316_embedded-systems.pdf",
+        "filenametemp": "usa-today/20220316_embedded-systems",
         "date": "2022-03-16",
         "category": "puzzle"
     },
@@ -10251,7 +10265,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "universal/20210803_give-this-puzzle-a-shot.puz",
+        "filenametemp": "universal/20210803_give-this-puzzle-a-shot",
         "date": "2021-08-03",
         "category": "puzzle"
     },
@@ -10563,7 +10577,7 @@
         "url": "https://www.girlbosswords.com/puzzle/themeless-7.html",
         "puz": "20210404_girlbosswords_themeless07.puz",
         "pdf": "20210404_girlbosswords_themeless07.pdf",
-        "filenametemp": "girlbosswords/20210404_themeless07.puz",
+        "filenametemp": "girlbosswords/20210404_themeless07",
         "date": "2021-04-04",
         "category": "puzzle"
     },
@@ -10763,7 +10777,7 @@
         "url": "https://www.girlbosswords.com/puzzle/themeless-5-yang.html",
         "puz": "20210215_girlbosswords_themeless05.puz",
         "pdf": "20210215_girlbosswords_themeless05.pdf",
-        "filenametemp": "girlbosswords/20210215_themeless05.puz",
+        "filenametemp": "girlbosswords/20210215_themeless05",
         "date": "2021-02-15",
         "category": "puzzle"
     },
