@@ -2,6 +2,20 @@
     {
         "publication": "Vulture",
         "collaborator": "",
+        "title": "The Unicorn Puzzle",
+        "publish date": "8/25/2026",
+        "type": "themeless",
+        "size": "midi",
+        "url": "https://www.vulture.com/article/daily-crossword-puzzle-august-25-2026.html",
+        "puz": "",
+        "pdf": "",
+        "filenametemp": "",
+        "date": "2026-08-25",
+        "category": "puzzle"
+    },
+    {
+        "publication": "Vulture",
+        "collaborator": "",
         "title": "The Getaway Puzzle",
         "publish date": "8/19/2026",
         "type": "themeless",
@@ -8948,7 +8962,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20220517_junior-high",
         "date": "2022-05-17",
         "category": "puzzle"
     },
@@ -9004,7 +9018,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "atlantic/20220515_untitled",
         "date": "2022-05-15",
         "category": "puzzle"
     },
@@ -9106,7 +9120,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20220428_tart-shells",
         "date": "2022-04-28",
         "category": "puzzle"
     },
@@ -9148,7 +9162,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20220421_mic-drop",
         "date": "2022-04-21",
         "category": "puzzle"
     },
@@ -9199,7 +9213,7 @@
         "url": "https://avxwords.com/puzzles/1063/",
         "puz": "20220415_avcxplus_wet-ass-puzzle.puz",
         "pdf": "20220415_avcxplus_wet-ass-puzzle.pdf",
-        "filenametemp": "",
+        "filenametemp": "avcx-plus/20220415_wet-ass-puzzle",
         "date": "2022-04-15",
         "category": "puzzle"
     },
@@ -9278,7 +9292,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20220405_indentation",
         "date": "2022-04-05",
         "category": "puzzle"
     },
@@ -9399,7 +9413,7 @@
         "url": "https://www.girlbosswords.com/puzzle/themeless-18-turn-up.html",
         "puz": "20220317_girlbosswords_themeless18.puz",
         "pdf": "20220317_girlbosswords_themeless18.pdf",
-        "filenametemp": "",
+        "filenametemp": "girlbosswords/20220317_themeless18",
         "date": "2022-03-17",
         "category": "puzzle"
     },
@@ -9436,7 +9450,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20220316_embedded-systems.pdf",
         "date": "2022-03-16",
         "category": "puzzle"
     },
@@ -9501,7 +9515,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "universal/20220305_freestyle-10",
         "date": "2022-03-05",
         "category": "puzzle"
     },
@@ -9613,7 +9627,7 @@
         "url": "https://www.girlbosswords.com/puzzle/themeless-17-swoops.html",
         "puz": "20220210_girlbosswords_themeless17.puz",
         "pdf": "20220210_girlbosswords_themeless17.pdf",
-        "filenametemp": "",
+        "filenametemp": "girlbosswords/20220210_themeless17",
         "date": "2022-02-10",
         "category": "puzzle"
     },
@@ -9706,7 +9720,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20220127_first-half",
         "date": "2022-01-27",
         "category": "puzzle"
     },
@@ -9757,7 +9771,7 @@
         "url": "",
         "puz": "20220112_fireball_dealers-choice.puz",
         "pdf": "20220112_fireball_dealers-choice.pdf",
-        "filenametemp": "",
+        "filenametemp": "fireball/20220112_dealers-choice",
         "date": "2022-01-12",
         "category": "puzzle"
     },
@@ -9771,7 +9785,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "atlantic/20220109_untitled",
         "date": "2022-01-09",
         "category": "puzzle"
     },
@@ -9785,7 +9799,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "universal/20220105_cast-aside",
         "date": "2022-01-05",
         "category": "puzzle"
     },
@@ -9799,7 +9813,7 @@
         "url": "https://www.girlbosswords.com/puzzle/themeless-16-colonnades.html",
         "puz": "20211229_girlbosswords_themeless16.puz",
         "pdf": "20211229_girlbosswords_themeless16.pdf",
-        "filenametemp": "",
+        "filenametemp": "girlbosswords/20211229_themeless16",
         "date": "2021-12-29",
         "category": "puzzle"
     },
@@ -9813,7 +9827,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20211222_geometry-final",
         "date": "2021-12-22",
         "category": "puzzle"
     },
@@ -9855,7 +9869,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20211210_odds-and-ends",
         "date": "2021-12-10",
         "category": "puzzle"
     },
@@ -9911,7 +9925,7 @@
         "url": "",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20211123_disney-princess-beginnings",
         "date": "2021-11-23",
         "category": "puzzle"
     },
@@ -9925,7 +9939,7 @@
         "url": "https://www.girlbosswords.com/puzzle/themeless-15-bears.html",
         "puz": "20211121_girlbosswords_themeless15.puz",
         "pdf": "20211121_girlbosswords_themeless15.pdf",
-        "filenametemp": "",
+        "filenametemp": "girlbosswords/20211121_themeless15",
         "date": "2021-11-21",
         "category": "puzzle"
     },
@@ -9953,7 +9967,7 @@
         "url": "",
         "puz": "20211111_usa-today_powerpuff-girls.puz",
         "pdf": "20211111_usa-today_powerpuff-girls.pdf",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20211111_powerpuff-girls",
         "date": "2021-11-11",
         "category": "puzzle"
     },
@@ -10009,7 +10023,7 @@
         "url": "https://www.girlbosswords.com/puzzle/themeless-14-time-loop.html",
         "puz": "20211028_girlbosswords_themeless14.puz",
         "pdf": "20211028_girlbosswords_themeless14.pdf",
-        "filenametemp": "",
+        "filenametemp": "girlbosswords/20211028_themeless14.puz",
         "date": "2021-10-28",
         "category": "puzzle"
     },
@@ -10023,7 +10037,7 @@
         "url": "https://www.girlbosswords.com/puzzle/to-a-t.html",
         "puz": "20210228_girlbosswords_to-a-t.puz",
         "pdf": "20210228_girlbosswords_to-a-t.pdf",
-        "filenametemp": "",
+        "filenametemp": "girlbosswords/20210228_to-a-t",
         "date": "2021-10-24",
         "category": "puzzle"
     },
@@ -10079,7 +10093,7 @@
         "url": "https://www.girlbosswords.com/puzzle/themeless-13-stackd.html",
         "puz": "20211003_girlbosswords_themeless13.puz",
         "pdf": "20211003_girlbosswords_themeless13.pdf",
-        "filenametemp": "",
+        "filenametemp": "girlbosswords/20211003_themeless13",
         "date": "2021-10-03",
         "category": "puzzle"
     },
@@ -10093,7 +10107,7 @@
         "url": "",
         "puz": "20210928_usa-today_laughing-on-the-inside.puz",
         "pdf": "20210928_usa-today_laughing-on-the-inside.pdf",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20210928_laughing-on-the-inside",
         "date": "2021-09-28",
         "category": "puzzle"
     },
@@ -10121,7 +10135,7 @@
         "url": "",
         "puz": "20210924_usa-today_volleyball-finals.puz",
         "pdf": "20210924_usa-today_volleyball-finals.pdf",
-        "filenametemp": "",
+        "filenametemp": "usa-today/20210924_volleyball-finals",
         "date": "2021-09-24",
         "category": "puzzle"
     },
@@ -10135,7 +10149,7 @@
         "url": "https://www.girlbosswords.com/puzzle/themeless-12-copycat.html",
         "puz": "20210909_girlbosswords_themeless12.puz",
         "pdf": "20210909_girlbosswords_themeless12.pdf",
-        "filenametemp": "",
+        "filenametemp": "girlbosswords/20210909_themeless12",
         "date": "2021-09-09",
         "category": "puzzle"
     },
