@@ -8706,7 +8706,7 @@
         "url": "https://xwordcontest.com/2022/07/mgwcc-736-friday-july-8th-2022-guest-constructor-month-puzzle-2-back-to-the-start-by-will-pfadenhauer-and-malaika-handa.html",
         "puz": "",
         "pdf": "",
-        "filenametemp": "",
+        "filenametemp": "mgwcc/20220708_back-to-the-start",
         "date": "2022-07-08",
         "category": "puzzle"
     },
@@ -10321,20 +10321,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "7xwords",
-        "collaborator": "",
-        "title": "July 14",
-        "publish date": "7/14/2021",
-        "type": "themeless",
-        "size": "midi",
-        "url": "https://www.7xwords.com/daily/07/07-14.html",
-        "puz": "",
-        "pdf": "",
-        "filenametemp": "",
-        "date": "2021-07-14",
-        "category": "puzzle"
-    },
-    {
         "publication": "bewilderingly",
         "collaborator": "",
         "title": "Block Party",
@@ -10345,6 +10331,20 @@
         "puz": "20210714_bewilderingly_block-party.puz",
         "pdf": "20210714_bewilderingly_block-party.pdf",
         "filenametemp": "bewilderingly/20210714_block-party",
+        "date": "2021-07-14",
+        "category": "puzzle"
+    },
+    {
+        "publication": "7xwords",
+        "collaborator": "",
+        "title": "July 14",
+        "publish date": "7/14/2021",
+        "type": "themeless",
+        "size": "midi",
+        "url": "https://www.7xwords.com/daily/07/07-14.html",
+        "puz": "",
+        "pdf": "",
+        "filenametemp": "",
         "date": "2021-07-14",
         "category": "puzzle"
     },
@@ -10456,20 +10456,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "7xwords",
-        "collaborator": "",
-        "title": "May 19",
-        "publish date": "5/19/2021",
-        "type": "themeless",
-        "size": "midi",
-        "url": "https://www.7xwords.com/daily/05/05-19.html",
-        "puz": "",
-        "pdf": "",
-        "filenametemp": "",
-        "date": "2021-05-19",
-        "category": "puzzle"
-    },
-    {
         "publication": "AVCX",
         "collaborator": "",
         "title": "Parting Company",
@@ -10480,6 +10466,20 @@
         "puz": "20210519_avcx_parting-company.puz",
         "pdf": "20210519_avcx_parting-company.pdf",
         "filenametemp": "avcx/20210519_parting-company",
+        "date": "2021-05-19",
+        "category": "puzzle"
+    },
+    {
+        "publication": "7xwords",
+        "collaborator": "",
+        "title": "May 19",
+        "publish date": "5/19/2021",
+        "type": "themeless",
+        "size": "midi",
+        "url": "https://www.7xwords.com/daily/05/05-19.html",
+        "puz": "",
+        "pdf": "",
+        "filenametemp": "",
         "date": "2021-05-19",
         "category": "puzzle"
     },
@@ -10740,20 +10740,6 @@
         "category": "puzzle"
     },
     {
-        "publication": "7xwords",
-        "collaborator": "",
-        "title": "February 21",
-        "publish date": "2/21/2021",
-        "type": "themeless",
-        "size": "midi",
-        "url": "https://www.7xwords.com/daily/02/02-21.html",
-        "puz": "",
-        "pdf": "",
-        "filenametemp": "",
-        "date": "2021-02-21",
-        "category": "puzzle"
-    },
-    {
         "publication": "girlbosswords",
         "collaborator": "Evan Bernstein",
         "title": "If you play your cards right...",
@@ -10764,6 +10750,20 @@
         "puz": "20210221_girlbosswords_if-you-play-your-cards-right.puz",
         "pdf": "20210221_girlbosswords_if-you-play-your-cards-right.pdf",
         "filenametemp": "girlbosswords/20210221_if-you-play-your-cards-right",
+        "date": "2021-02-21",
+        "category": "puzzle"
+    },
+    {
+        "publication": "7xwords",
+        "collaborator": "",
+        "title": "February 21",
+        "publish date": "2/21/2021",
+        "type": "themeless",
+        "size": "midi",
+        "url": "https://www.7xwords.com/daily/02/02-21.html",
+        "puz": "",
+        "pdf": "",
+        "filenametemp": "",
         "date": "2021-02-21",
         "category": "puzzle"
     },
